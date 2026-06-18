@@ -1,5 +1,9 @@
 # Mambo — a voice + hum producer co-pilot
 
+[![CI](https://github.com/ufukkaraca/large-mambo-model/actions/workflows/ci.yml/badge.svg)](https://github.com/ufukkaraca/large-mambo-model/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python 3.11 | 3.12](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue.svg)](lab/pyproject.toml)
+
 **Talk to your DAW the way you'd talk to a producer** — spoken instructions and hummed
 melody, *in a single breath* — and Mambo figures out which part was a command and which
 was music, then does it.
