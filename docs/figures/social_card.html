@@ -1,0 +1,84 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  @page { size: 1280px 640px; margin: 0 }
+  html, body { margin: 0; padding: 0 }
+  :root {
+    --bg0:#0a0a0e; --bg1:#15121b;
+    --ink:#f4f1ea; --muted:#9690a0;
+    --amber:#ffb454;   /* the hum / melody */
+    --cyan:#74d6e6;    /* the speech / command */
+  }
+  .card {
+    position:relative; width:1280px; height:640px; overflow:hidden;
+    background:
+      radial-gradient(1100px 700px at 78% -10%, rgba(255,180,84,.10), transparent 60%),
+      radial-gradient(900px 620px at 8% 115%, rgba(116,214,230,.09), transparent 55%),
+      linear-gradient(150deg, var(--bg1), var(--bg0));
+    font-family:"Avenir Next","Helvetica Neue",sans-serif; color:var(--ink);
+  }
+  /* fine grain so the gradient never looks flat */
+  .grain { position:absolute; inset:0; opacity:.05; mix-blend-mode:overlay; }
+  .pad { position:absolute; inset:0; padding:74px 84px; box-sizing:border-box;
+         display:flex; flex-direction:column; }
+  .eyebrow { font-size:18px; letter-spacing:.34em; text-transform:uppercase;
+             color:var(--muted); font-weight:600; }
+  .eyebrow b { color:var(--amber); font-weight:700; }
+  .wordmark { font-family:"Futura","Avenir Next",sans-serif; font-weight:700;
+              font-size:172px; line-height:.92; letter-spacing:-.01em; margin:26px 0 0;
+              text-shadow:0 2px 40px rgba(0,0,0,.45); }
+  .wordmark .o { color:var(--amber); }
+  .tag { font-size:40px; font-weight:500; color:var(--ink); margin-top:14px; letter-spacing:-.01em; }
+  .tag .accent { color:var(--cyan); }
+  .quote { font-size:25px; color:var(--muted); margin-top:auto; font-weight:500; }
+  .quote .spk { color:var(--cyan); }
+  .quote .hum { color:var(--amber); font-weight:700; }
+  .footer { display:flex; align-items:center; justify-content:space-between; margin-top:22px; }
+  .url { font-family:"Menlo",monospace; font-size:21px; color:var(--ink); opacity:.92; }
+  .chips { font-size:18px; color:var(--muted); letter-spacing:.04em; }
+  .chips span { color:var(--ink); }
+  /* the segment-and-route motif: speech wave (left) -> hum notes (right) */
+  .motif { position:absolute; right:84px; top:150px; opacity:.96; }
+</style>
+<div class="card">
+  <svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+  <!-- speech→hum motif, top-right -->
+  <svg class="motif" width="430" height="150" viewBox="0 0 430 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- speech waveform (cyan) -->
+    <g stroke="#74d6e6" stroke-width="3.4" stroke-linecap="round" opacity="0.92">
+      <line x1="8"   y1="75" x2="8"   y2="75"/>
+      <line x1="22"  y1="58" x2="22"  y2="92"/>
+      <line x1="36"  y1="40" x2="36"  y2="110"/>
+      <line x1="50"  y1="62" x2="50"  y2="88"/>
+      <line x1="64"  y1="30" x2="64"  y2="120"/>
+      <line x1="78"  y1="52" x2="78"  y2="98"/>
+      <line x1="92"  y1="46" x2="92"  y2="104"/>
+      <line x1="106" y1="64" x2="106" y2="86"/>
+      <line x1="120" y1="36" x2="120" y2="114"/>
+      <line x1="134" y1="60" x2="134" y2="90"/>
+    </g>
+    <!-- the router arrow -->
+    <path d="M152 75 H188" stroke="#9690a0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M182 68 L190 75 L182 82" stroke="#9690a0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <!-- hum as a piano roll (amber notes at different pitches) -->
+    <g fill="#ffb454">
+      <rect x="206" y="96"  width="40" height="13" rx="6"/>
+      <rect x="252" y="74"  width="34" height="13" rx="6"/>
+      <rect x="292" y="52"  width="48" height="13" rx="6"/>
+      <rect x="346" y="64"  width="30" height="13" rx="6"/>
+      <rect x="382" y="40"  width="40" height="13" rx="6"/>
+    </g>
+  </svg>
+
+  <div class="pad">
+    <div class="eyebrow">open <b>·</b> reproducible <b>·</b> &asymp; zero training cost</div>
+    <div class="wordmark">Mamb<span class="o">o</span></div>
+    <div class="tag">a <span class="accent">voice + hum</span> producer co-pilot</div>
+    <div class="quote">&ldquo;<span class="spk">give me something like</span> <span class="hum">&#9834;&#9834;&#9834;</span> <span class="spk">but slower&hellip; and kick the drums up</span>&rdquo;</div>
+    <div class="footer">
+      <div class="url">github.com/ufukkaraca/large-mambo-model</div>
+      <div class="chips">parses <span>speech&#8853;hum</span> &rarr; <span>UIR</span> &rarr; <span>REAPER</span></div>
+    </div>
+  </div>
+</div>
