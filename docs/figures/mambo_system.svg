@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1190 430" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#8b91a0"/>
+    </marker>
+    <style>
+      .box{fill:#ffffff;stroke:#c7cad4;stroke-width:1.5;rx:11;}
+      .nm{fill:#1b2030;font-size:16px;font-weight:600;}
+      .sub{fill:#5d6577;font-size:11.5px;}
+      .mono{font-family:ui-monospace,Menlo,monospace;fill:#6a52c7;font-size:11px;}
+      .ann{fill:#7a8090;font-size:11px;}
+      .edge{stroke:#8b91a0;stroke-width:1.6;fill:none;}
+      .group{fill:#9aa1b0;font-size:11px;font-weight:600;letter-spacing:2px;}
+    </style>
+  </defs>
+
+  <!-- phase bands -->
+  <rect x="18" y="66" width="660" height="300" rx="14" fill="#f6f7fb" stroke="#e6e8f0"/>
+  <rect x="694" y="66" width="478" height="300" rx="14" fill="#fbf7f1" stroke="#efe6d8"/>
+  <text x="34" y="58" class="group">PERCEPTION — understanding</text>
+  <text x="710" y="58" class="group" fill="#caa46a">COGNITION → ACTUATION</text>
+
+  <!-- 1. mic -->
+  <rect class="box" x="34" y="178" width="118" height="74"/>
+  <text x="93" y="208" text-anchor="middle" class="nm">one</text>
+  <text x="93" y="227" text-anchor="middle" class="nm">utterance</text>
+  <text x="93" y="245" text-anchor="middle" class="sub">speech·hum·beatbox</text>
+
+  <!-- 2. route -->
+  <rect class="box" x="186" y="158" width="138" height="114"/>
+  <text x="255" y="206" text-anchor="middle" class="nm">segment</text>
+  <text x="255" y="225" text-anchor="middle" class="nm">+ route</text>
+  <text x="255" y="246" text-anchor="middle" class="sub">acoustic ⊕ linguistic</text>
+  <text x="255" y="290" text-anchor="middle" class="ann">§2.4 fusion · the load-bearing step</text>
+
+  <!-- 3. decoder fan -->
+  <rect class="box" x="360" y="92" width="150" height="58"/>
+  <text x="435" y="116" text-anchor="middle" class="nm">ASR</text>
+  <text x="435" y="135" text-anchor="middle" class="sub">speech → text (on-device)</text>
+
+  <rect class="box" x="360" y="186" width="150" height="58"/>
+  <text x="435" y="210" text-anchor="middle" class="nm">pitch tracker</text>
+  <text x="435" y="229" text-anchor="middle" class="sub">hum → notes (pYIN)</text>
+
+  <rect class="box" x="360" y="280" width="150" height="58"/>
+  <text x="435" y="304" text-anchor="middle" class="nm">onset classifier</text>
+  <text x="435" y="323" text-anchor="middle" class="sub">beatbox → drums</text>
+
+  <!-- 4. fuse -> UIR -->
+  <rect class="box" x="548" y="158" width="118" height="114"/>
+  <text x="607" y="200" text-anchor="middle" class="nm">fuse</text>
+  <text x="607" y="221" text-anchor="middle" class="sub">→ UIR</text>
+  <text x="607" y="243" text-anchor="middle" class="mono">utterance.v1</text>
+  <text x="607" y="292" text-anchor="middle" class="ann">contract: no ASR</text>
+  <text x="607" y="307" text-anchor="middle" class="ann">text on a hum (0% halluc.)</text>
+
+  <!-- 5. reasoning (highlight) -->
+  <rect x="712" y="158" width="146" height="114" rx="11" fill="#fff3e3" stroke="#e2902f" stroke-width="2.2"/>
+  <text x="785" y="198" text-anchor="middle" class="nm" fill="#8a5414">reasoning</text>
+  <text x="785" y="219" text-anchor="middle" class="sub" fill="#9a6a2a">verify + dual-decode</text>
+  <text x="785" y="243" text-anchor="middle" class="mono" fill="#b06a1a">ambiguous = notes+lyric</text>
+  <text x="785" y="292" text-anchor="middle" class="ann" fill="#b08040">the novelty — §6.1g</text>
+
+  <!-- 6. planner -->
+  <rect class="box" x="892" y="158" width="120" height="114"/>
+  <text x="952" y="204" text-anchor="middle" class="nm">planner</text>
+  <text x="952" y="224" text-anchor="middle" class="sub">LLM</text>
+  <text x="952" y="246" text-anchor="middle" class="mono" fill="#6a52c7">action.v1</text>
+
+  <!-- 7. REAPER -->
+  <rect class="box" x="1040" y="178" width="116" height="74" fill="#1b2030" stroke="#1b2030"/>
+  <text x="1098" y="210" text-anchor="middle" class="nm" fill="#ffffff">REAPER</text>
+  <text x="1098" y="229" text-anchor="middle" class="sub" fill="#aab0c0">plan + MIDI</text>
+
+  <!-- edges -->
+  <path class="edge" d="M152,215 L186,215" marker-end="url(#ah)"/>
+  <path class="edge" d="M324,200 C342,150 344,121 358,121" marker-end="url(#ah)"/>
+  <path class="edge" d="M324,215 L358,215" marker-end="url(#ah)"/>
+  <path class="edge" d="M324,230 C342,280 344,309 358,309" marker-end="url(#ah)"/>
+  <path class="edge" d="M510,121 C528,150 530,196 546,200" marker-end="url(#ah)"/>
+  <path class="edge" d="M510,215 L546,215" marker-end="url(#ah)"/>
+  <path class="edge" d="M510,309 C528,280 530,234 546,230" marker-end="url(#ah)"/>
+  <path class="edge" d="M666,215 L710,215" marker-end="url(#ah)"/>
+  <path class="edge" d="M858,215 L890,215" marker-end="url(#ah)"/>
+  <path class="edge" d="M1012,215 L1038,215" marker-end="url(#ah)"/>
+
+  <!-- dual-decode callout -->
+  <path d="M785,158 C785,120 785,108 785,100" stroke="#e2902f" stroke-width="1.4" fill="none" stroke-dasharray="4 3"/>
+  <rect x="636" y="74" width="300" height="28" rx="7" fill="#fff" stroke="#e2902f" stroke-dasharray="4 3"/>
+  <text x="786" y="92" text-anchor="middle" font-size="11.5px" fill="#8a5414">sung demo → melody <tspan font-weight="700">+ captured lyric</tspan> · recall 0.83</text>
+
+  <text x="595" y="406" text-anchor="middle" class="ann" font-size="12px">Mambo: a joint-routed pipeline; speech is text only after a verification gate, and reasoning promotes a sung span to carry both notes and lyric.</text>
+</svg>

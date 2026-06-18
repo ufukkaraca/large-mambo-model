@@ -1,0 +1,89 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_can_bass_043_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.1212,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.212,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "can the bass do this"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3572,
+      "t1": 6.0612,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 1.3572,
+          "dur": 1.104,
+          "vel": 92
+        },
+        {
+          "midi": 56,
+          "name": "G#3",
+          "t0": 2.5572,
+          "dur": 0.828,
+          "vel": 94
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 3.4572,
+          "dur": 0.552,
+          "vel": 96
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 4.0572,
+          "dur": 0.276,
+          "vel": 81
+        },
+        {
+          "midi": 52,
+          "name": "E3",
+          "t0": 4.3572,
+          "dur": 0.552,
+          "vel": 88
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 4.9572,
+          "dur": 1.104,
+          "vel": 78
+        }
+      ],
+      "analysis": {
+        "n_notes": 6,
+        "key_candidates": [
+          {
+            "key": "A major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 100.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 213.74
+      }
+    }
+  ]
+}

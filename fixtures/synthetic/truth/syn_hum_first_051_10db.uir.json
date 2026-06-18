@@ -1,0 +1,95 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_hum_first_051_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.0172,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 4.2,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 0.0,
+          "dur": 0.9857,
+          "vel": 85
+        },
+        {
+          "midi": 69,
+          "name": "A4",
+          "t0": 1.0714,
+          "dur": 0.2464,
+          "vel": 99
+        },
+        {
+          "midi": 68,
+          "name": "G#4",
+          "t0": 1.3393,
+          "dur": 0.4929,
+          "vel": 96
+        },
+        {
+          "midi": 71,
+          "name": "B4",
+          "t0": 1.875,
+          "dur": 0.4929,
+          "vel": 89
+        },
+        {
+          "midi": 69,
+          "name": "A4",
+          "t0": 2.4107,
+          "dur": 0.4929,
+          "vel": 97
+        },
+        {
+          "midi": 73,
+          "name": "C#5",
+          "t0": 2.9464,
+          "dur": 0.2464,
+          "vel": 90
+        },
+        {
+          "midi": 78,
+          "name": "F#5",
+          "t0": 3.2143,
+          "dur": 0.9857,
+          "vel": 86
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "F# minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 112.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u d u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 440.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 4.4342,
+      "t1": 6.0172,
+      "confidence": 1.0,
+      "text": "that, but on strings"
+    }
+  ]
+}

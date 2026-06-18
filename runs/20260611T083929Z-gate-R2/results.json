@@ -1,0 +1,46 @@
+{
+  "phase": "R2",
+  "timestamp": "20260611T083929Z",
+  "commit": "f1986f71a69cabfae308be16257fa030a9cdcfb8",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "r2.onset_class_accuracy",
+      "metric": "onset-class accuracy (synthetic beatbox)",
+      "threshold": ">= 0.90",
+      "measured": 0.984375,
+      "status": "PASS",
+      "detail": "correct/GT over 320 hits"
+    },
+    {
+      "name": "r2.detection_recall",
+      "metric": "onset detection recall",
+      "threshold": ">= 0.90 target",
+      "measured": 0.984375,
+      "status": "PASS",
+      "detail": "spectral-flux onsets"
+    },
+    {
+      "name": "r2.insert_drum_pattern",
+      "metric": "insert_drum_pattern op exists",
+      "threshold": "present",
+      "measured": null,
+      "status": "PASS",
+      "detail": "actions.TOOLS"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    }
+  ],
+  "summary": {
+    "s_pass": 4,
+    "s_fail": 0,
+    "pending": 0
+  },
+  "ablation": {}
+}

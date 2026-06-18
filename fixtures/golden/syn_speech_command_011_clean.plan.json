@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_011_clean",
+  "intent_summary": "set tempo to 108",
+  "needs_confirmation": true,
+  "actions": [
+    {
+      "op": "set_project_tempo",
+      "args": {
+        "bpm": 108.0
+      }
+    }
+  ]
+}

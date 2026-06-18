@@ -1,0 +1,88 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_020_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 7.2358,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 7.1758,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 0.0,
+          "dur": 1.1152,
+          "vel": 98
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 1.2121,
+          "dur": 0.8364,
+          "vel": 85
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 2.1212,
+          "dur": 0.5576,
+          "vel": 98
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 2.7273,
+          "dur": 1.1152,
+          "vel": 78
+        },
+        {
+          "midi": 68,
+          "name": "G#4",
+          "t0": 3.9394,
+          "dur": 0.8364,
+          "vel": 90
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 4.8485,
+          "dur": 1.1152,
+          "vel": 89
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 6.0606,
+          "dur": 1.1152,
+          "vel": 86
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "D# major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 99.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u u d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 349.23
+      }
+    }
+  ]
+}

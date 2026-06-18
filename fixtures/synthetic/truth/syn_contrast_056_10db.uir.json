@@ -1,0 +1,152 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_contrast_056_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 13.5504,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.797,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "make it go"
+    },
+    {
+      "kind": "melody",
+      "t0": 0.9153,
+      "t1": 6.0965,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 0.9153,
+          "dur": 1.2988,
+          "vel": 84
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 2.3271,
+          "dur": 1.2988,
+          "vel": 98
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 3.7388,
+          "dur": 0.3247,
+          "vel": 101
+        },
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 4.0918,
+          "dur": 0.6494,
+          "vel": 78
+        },
+        {
+          "midi": 71,
+          "name": "B4",
+          "t0": 4.7977,
+          "dur": 1.2988,
+          "vel": 92
+        }
+      ],
+      "analysis": {
+        "n_notes": 5,
+        "key_candidates": [
+          {
+            "key": "B major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 85.0,
+          "confidence": 1.0
+        },
+        "contour": "u u u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 329.63
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 6.4018,
+      "t1": 7.114,
+      "confidence": 1.0,
+      "text": "instead of"
+    },
+    {
+      "kind": "melody",
+      "t0": 7.199,
+      "t1": 13.4904,
+      "confidence": 1.0,
+      "role": "contrast",
+      "notes": [
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 7.199,
+          "dur": 1.5771,
+          "vel": 92
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 8.9133,
+          "dur": 0.3943,
+          "vel": 97
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 9.3419,
+          "dur": 0.7886,
+          "vel": 86
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 10.199,
+          "dur": 1.5771,
+          "vel": 90
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 11.9133,
+          "dur": 1.5771,
+          "vel": 103
+        }
+      ],
+      "analysis": {
+        "n_notes": 5,
+        "key_candidates": [
+          {
+            "key": "D major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 70.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 293.66
+      }
+    }
+  ]
+}

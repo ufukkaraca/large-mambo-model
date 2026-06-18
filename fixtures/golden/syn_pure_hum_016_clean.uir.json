@@ -1,0 +1,129 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_016_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 4.3707,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 4.3107,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 0.0,
+          "dur": 0.8492,
+          "vel": 90
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 0.9231,
+          "dur": 0.6369,
+          "vel": 88
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 1.6154,
+          "dur": 0.8492,
+          "vel": 98
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 2.5385,
+          "dur": 0.4246,
+          "vel": 101
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 3.0,
+          "dur": 0.4246,
+          "vel": 89
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 3.4615,
+          "dur": 0.8492,
+          "vel": 89
+        }
+      ],
+      "analysis": {
+        "n_notes": 6,
+        "key_candidates": [
+          {
+            "key": "D major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 130.0,
+          "confidence": 1.0
+        },
+        "contour": "u d d u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 293.66
+      }
+    }
+  ],
+  "session_context": {
+    "daw": "garageband",
+    "selected_track": {
+      "index": 2,
+      "name": "Keys",
+      "kind": "software_instrument"
+    },
+    "tracks": [
+      {
+        "index": 0,
+        "name": "Drums",
+        "kind": "drummer"
+      },
+      {
+        "index": 1,
+        "name": "Bass",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 2,
+        "name": "Keys",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 3,
+        "name": "Lead",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 4,
+        "name": "Vocal",
+        "kind": "audio"
+      },
+      {
+        "index": 5,
+        "name": "Guitar",
+        "kind": "audio"
+      },
+      {
+        "index": 6,
+        "name": "Hats",
+        "kind": "drummer"
+      }
+    ],
+    "project_tempo_bpm": 120,
+    "project_key": "C major",
+    "transport": "stopped"
+  }
+}

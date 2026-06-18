@@ -1,0 +1,53 @@
+{
+  "commit": "25c2876384c758cac416adc479b0769151304040",
+  "metric_carve": "joint segment F1",
+  "metric_note": "note F1",
+  "full": {
+    "joint_seg_f1": {
+      "clean": 0.9414,
+      "20db": 0.9111,
+      "10db": 0.9109
+    },
+    "note_f1": {
+      "clean": 1.0,
+      "20db": 0.9784,
+      "10db": 0.9785
+    }
+  },
+  "no_carve": {
+    "joint_seg_f1": {
+      "clean": 0.9222,
+      "20db": 0.8762,
+      "10db": 0.8885
+    },
+    "delta": {
+      "clean": 0.0192,
+      "20db": 0.0349,
+      "10db": 0.0224
+    }
+  },
+  "no_deflutter": {
+    "note_f1": {
+      "clean": 0.968,
+      "20db": 0.9092,
+      "10db": 0.9285
+    },
+    "delta": {
+      "clean": 0.032,
+      "20db": 0.0692,
+      "10db": 0.05
+    }
+  },
+  "no_pitch_plateau": {
+    "note_f1": {
+      "clean": 1.0,
+      "20db": 0.9784,
+      "10db": 0.9785
+    },
+    "delta": {
+      "clean": 0.0,
+      "20db": 0.0,
+      "10db": 0.0
+    }
+  }
+}

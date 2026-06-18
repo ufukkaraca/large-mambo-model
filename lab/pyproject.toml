@@ -1,0 +1,50 @@
+[project]
+name = "mambo-lab"
+version = "0.1.0"
+description = "Mambo Stage-R lab: mixed vocal utterance -> mambo.utterance.v1 -> mambo.action.v1 + MIDI"
+readme = "../README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Ufuk Karaca" }]
+
+# Core deps that the early R0 modules (datagen, ir, melody DSP, eval) need.
+# Heavier optional stacks (torch+pesto/torchcrepe for f0, faster-whisper for
+# the ASR probe, tensorflow-hub for YAMNet, anthropic for the R1 planner) are
+# declared as extras so `uv sync` stays fast and robust; they are pulled in by
+# the phase steps that first require them.
+dependencies = [
+    "numpy>=1.26,<2.2",
+    "scipy>=1.11",
+    "soundfile>=0.12",
+    "librosa>=0.10.2",
+    "mir_eval>=0.7",
+    "jiwer>=3.0",
+    "pretty_midi>=0.2.10",
+    "jsonschema>=4.21",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+f0 = ["torch>=2.2", "torchcrepe>=0.0.23", "pesto-pitch>=0.1.3"]
+asr = ["faster-whisper>=1.0"]
+acoustic = ["tensorflow>=2.16", "tensorflow-hub>=0.16"]
+planner = ["anthropic>=0.40"]
+train = ["modal>=0.64"]
+
+[project.scripts]
+mambo = "mambo_lab.cli:main"
+mambobench = "mambo_lab.eval.bench:main"
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mambo_lab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,95 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_015_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 4.933,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 4.873,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 0.0,
+          "dur": 0.96,
+          "vel": 100
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 1.0435,
+          "dur": 0.24,
+          "vel": 91
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 1.3043,
+          "dur": 0.72,
+          "vel": 97
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 2.087,
+          "dur": 0.24,
+          "vel": 101
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 2.3478,
+          "dur": 0.72,
+          "vel": 101
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 3.1304,
+          "dur": 0.48,
+          "vel": 78
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 3.6522,
+          "dur": 0.24,
+          "vel": 103
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 3.913,
+          "dur": 0.96,
+          "vel": 94
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "C major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 115.0,
+          "confidence": 1.0
+        },
+        "contour": "d u u d d d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 261.63
+      }
+    }
+  ]
+}

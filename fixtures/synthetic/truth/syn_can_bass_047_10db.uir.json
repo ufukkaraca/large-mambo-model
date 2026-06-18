@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_can_bass_047_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 11.6022,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.138,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "can the bass do this"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.2589,
+      "t1": 11.5422,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 1.2589,
+          "dur": 1.5333,
+          "vel": 93
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 2.9256,
+          "dur": 0.7667,
+          "vel": 79
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 3.7589,
+          "dur": 0.7667,
+          "vel": 81
+        },
+        {
+          "midi": 68,
+          "name": "G#4",
+          "t0": 4.5922,
+          "dur": 1.5333,
+          "vel": 95
+        },
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 6.2589,
+          "dur": 1.5333,
+          "vel": 80
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 7.9256,
+          "dur": 1.5333,
+          "vel": 86
+        },
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 9.5922,
+          "dur": 0.3833,
+          "vel": 102
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 10.0089,
+          "dur": 1.5333,
+          "vel": 97
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "E major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 72.0,
+          "confidence": 1.0
+        },
+        "contour": "d u u d d u d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 329.63
+      }
+    }
+  ]
+}

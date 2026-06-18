@@ -1,0 +1,28 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_pure_hum_017_clean",
+  "intent_summary": "insert the hummed phrase at 115.0 bpm",
+  "needs_confirmation": true,
+  "actions": [
+    {
+      "op": "play_preview",
+      "args": {
+        "notes_ref": "seg:0",
+        "tempo_bpm": 115.0
+      }
+    },
+    {
+      "op": "insert_notes",
+      "args": {
+        "notes_ref": "seg:0",
+        "tempo_bpm": 115.0,
+        "track": {
+          "by": "selected"
+        }
+      },
+      "artifacts": {
+        "midi_file": "out/syn_pure_hum_017_clean.mid"
+      }
+    }
+  ]
+}

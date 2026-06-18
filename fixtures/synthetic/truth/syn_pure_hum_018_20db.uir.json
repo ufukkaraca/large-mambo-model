@@ -1,0 +1,95 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_018_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.8462,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 6.7862,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 0.0,
+          "dur": 1.269,
+          "vel": 99
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 1.3793,
+          "dur": 0.9517,
+          "vel": 85
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 2.4138,
+          "dur": 0.6345,
+          "vel": 79
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 3.1034,
+          "dur": 0.3172,
+          "vel": 80
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 3.4483,
+          "dur": 0.3172,
+          "vel": 88
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 3.7931,
+          "dur": 0.9517,
+          "vel": 86
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 4.8276,
+          "dur": 0.6345,
+          "vel": 88
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 5.5172,
+          "dur": 1.269,
+          "vel": 83
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "A# minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 87.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u d d u d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 269.29
+      }
+    }
+  ]
+}

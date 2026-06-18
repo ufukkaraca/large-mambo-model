@@ -1,0 +1,19 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_speech_command_002_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 0.8769,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.8769,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "mute the keys"
+    }
+  ]
+}

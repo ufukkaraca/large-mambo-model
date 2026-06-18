@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_010_clean",
+  "intent_summary": "toggle cycle",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "transport",
+      "args": {
+        "action": "cycle"
+      }
+    }
+  ]
+}

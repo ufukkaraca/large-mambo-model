@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_027_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 10.0332,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.2581,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3926,
+      "t1": 9.0375,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 1.3926,
+          "dur": 1.2404,
+          "vel": 83
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 2.7409,
+          "dur": 1.2404,
+          "vel": 98
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 4.0892,
+          "dur": 0.6202,
+          "vel": 80
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 4.7634,
+          "dur": 0.3101,
+          "vel": 99
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 5.1005,
+          "dur": 1.2404,
+          "vel": 84
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 6.4488,
+          "dur": 1.2404,
+          "vel": 86
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 7.7971,
+          "dur": 1.2404,
+          "vel": 86
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "F minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 89.0,
+          "confidence": 1.0
+        },
+        "contour": "d d d u u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 311.13
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 9.2111,
+      "t1": 10.0332,
+      "confidence": 1.0,
+      "text": "but faster"
+    }
+  ]
+}

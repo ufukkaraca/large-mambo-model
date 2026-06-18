@@ -1,0 +1,389 @@
+{
+  "task": "B6 honest \u2014 frontier omni vs Mambo on hum\u2192notes (precision/recall/F1/note-count)",
+  "frontier_model": "gpt-audio-1.5",
+  "n_clips": 12,
+  "audio_ingested": true,
+  "est_cost_usd": 0.034,
+  "mambo": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "note_count_err": 0.0
+  },
+  "frontier": {
+    "precision": 0.4,
+    "recall": 0.452,
+    "f1": 0.42,
+    "note_count_err": 1.75
+  },
+  "qwen_open": {
+    "precision": 0.43,
+    "recall": 0.194,
+    "f1": 0.264,
+    "note_count_err": 3.583
+  },
+  "per_clip": [
+    {
+      "uid": "syn_pure_hum_014_clean",
+      "gt_n": 8,
+      "frontier_n": 8,
+      "frontier": {
+        "n_pred": 8,
+        "n_gt": 8,
+        "note_count_err": 0,
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1": 0.25
+      },
+      "mambo": {
+        "n_pred": 8,
+        "n_gt": 8,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: C4, D4, E4, F4, G4, A4, G4, F4",
+      "qwen": {
+        "n_pred": 2,
+        "n_gt": 8,
+        "note_count_err": 6,
+        "precision": 0.5,
+        "recall": 0.125,
+        "f1": 0.2
+      }
+    },
+    {
+      "uid": "syn_pure_hum_015_clean",
+      "gt_n": 8,
+      "frontier_n": 7,
+      "frontier": {
+        "n_pred": 7,
+        "n_gt": 8,
+        "note_count_err": 1,
+        "precision": 0.429,
+        "recall": 0.375,
+        "f1": 0.4
+      },
+      "mambo": {
+        "n_pred": 8,
+        "n_gt": 8,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, G4, E4, G4, F4, D4",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 8,
+        "note_count_err": 5,
+        "precision": 0.667,
+        "recall": 0.25,
+        "f1": 0.364
+      }
+    },
+    {
+      "uid": "syn_pure_hum_016_clean",
+      "gt_n": 6,
+      "frontier_n": 6,
+      "frontier": {
+        "n_pred": 6,
+        "n_gt": 6,
+        "note_count_err": 0,
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5
+      },
+      "mambo": {
+        "n_pred": 6,
+        "n_gt": 6,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, A4, G4, C5, B4",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 6,
+        "note_count_err": 3,
+        "precision": 0.333,
+        "recall": 0.167,
+        "f1": 0.222
+      }
+    },
+    {
+      "uid": "syn_pure_hum_017_clean",
+      "gt_n": 8,
+      "frontier_n": 0,
+      "frontier": {
+        "n_pred": 0,
+        "n_gt": 8,
+        "note_count_err": 8,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "mambo": {
+        "n_pred": 8,
+        "n_gt": 8,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "{\"analyze_audio\": true}",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 8,
+        "note_count_err": 5,
+        "precision": 0.333,
+        "recall": 0.125,
+        "f1": 0.182
+      }
+    },
+    {
+      "uid": "syn_pure_hum_018_clean",
+      "gt_n": 8,
+      "frontier_n": 12,
+      "frontier": {
+        "n_pred": 12,
+        "n_gt": 8,
+        "note_count_err": 4,
+        "precision": 0.417,
+        "recall": 0.625,
+        "f1": 0.5
+      },
+      "mambo": {
+        "n_pred": 8,
+        "n_gt": 8,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, A4, G4, C5, B4, G4, G4, A4, G4, D5, C5",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 8,
+        "note_count_err": 5,
+        "precision": 0.333,
+        "recall": 0.125,
+        "f1": 0.182
+      }
+    },
+    {
+      "uid": "syn_pure_hum_019_clean",
+      "gt_n": 5,
+      "frontier_n": 7,
+      "frontier": {
+        "n_pred": 7,
+        "n_gt": 5,
+        "note_count_err": 2,
+        "precision": 0.429,
+        "recall": 0.6,
+        "f1": 0.5
+      },
+      "mambo": {
+        "n_pred": 5,
+        "n_gt": 5,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G3, G3, G3, G3, F3, E3, D3",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 5,
+        "note_count_err": 2,
+        "precision": 0.333,
+        "recall": 0.2,
+        "f1": 0.25
+      }
+    },
+    {
+      "uid": "syn_pure_hum_020_clean",
+      "gt_n": 7,
+      "frontier_n": 7,
+      "frontier": {
+        "n_pred": 7,
+        "n_gt": 7,
+        "note_count_err": 0,
+        "precision": 0.714,
+        "recall": 0.714,
+        "f1": 0.714
+      },
+      "mambo": {
+        "n_pred": 7,
+        "n_gt": 7,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "{\"notes\": [\"C4\", \"D4\", \"E4\", \"G4\", \"E4\", \"D4\", \"C4\"]}",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 7,
+        "note_count_err": 4,
+        "precision": 1.0,
+        "recall": 0.429,
+        "f1": 0.6
+      }
+    },
+    {
+      "uid": "syn_pure_hum_021_clean",
+      "gt_n": 7,
+      "frontier_n": 6,
+      "frontier": {
+        "n_pred": 6,
+        "n_gt": 7,
+        "note_count_err": 1,
+        "precision": 0.5,
+        "recall": 0.429,
+        "f1": 0.462
+      },
+      "mambo": {
+        "n_pred": 7,
+        "n_gt": 7,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, A4, G4, C5, B4",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 7,
+        "note_count_err": 4,
+        "precision": 0.333,
+        "recall": 0.143,
+        "f1": 0.2
+      }
+    },
+    {
+      "uid": "syn_pure_hum_022_clean",
+      "gt_n": 5,
+      "frontier_n": 5,
+      "frontier": {
+        "n_pred": 5,
+        "n_gt": 5,
+        "note_count_err": 0,
+        "precision": 0.4,
+        "recall": 0.4,
+        "f1": 0.4
+      },
+      "mambo": {
+        "n_pred": 5,
+        "n_gt": 5,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "{\"notes\": [\"C4\", \"C4\", \"D4\", \"E4\", \"E4\"]}",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 5,
+        "note_count_err": 2,
+        "precision": 0.333,
+        "recall": 0.2,
+        "f1": 0.25
+      }
+    },
+    {
+      "uid": "syn_pure_hum_023_clean",
+      "gt_n": 6,
+      "frontier_n": 7,
+      "frontier": {
+        "n_pred": 7,
+        "n_gt": 6,
+        "note_count_err": 1,
+        "precision": 0.286,
+        "recall": 0.333,
+        "f1": 0.308
+      },
+      "mambo": {
+        "n_pred": 6,
+        "n_gt": 6,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, E4, E4, D4, D4, C4",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 6,
+        "note_count_err": 3,
+        "precision": 0.333,
+        "recall": 0.167,
+        "f1": 0.222
+      }
+    },
+    {
+      "uid": "syn_pure_hum_024_clean",
+      "gt_n": 5,
+      "frontier_n": 8,
+      "frontier": {
+        "n_pred": 8,
+        "n_gt": 5,
+        "note_count_err": 3,
+        "precision": 0.375,
+        "recall": 0.6,
+        "f1": 0.462
+      },
+      "mambo": {
+        "n_pred": 5,
+        "n_gt": 5,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "NOTES: G4, G4, G4, E4, G4, G4, G4, E4",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 5,
+        "note_count_err": 2,
+        "precision": 0.333,
+        "recall": 0.2,
+        "f1": 0.25
+      }
+    },
+    {
+      "uid": "syn_pure_hum_025_clean",
+      "gt_n": 5,
+      "frontier_n": 6,
+      "frontier": {
+        "n_pred": 6,
+        "n_gt": 5,
+        "note_count_err": 1,
+        "precision": 0.5,
+        "recall": 0.6,
+        "f1": 0.545
+      },
+      "mambo": {
+        "n_pred": 5,
+        "n_gt": 5,
+        "note_count_err": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "frontier_raw": "{\"notes\": [\"G4\", \"G4\", \"E4\", \"E4\", \"F4\", \"D4\"]}",
+      "qwen": {
+        "n_pred": 3,
+        "n_gt": 5,
+        "note_count_err": 2,
+        "precision": 0.333,
+        "recall": 0.2,
+        "f1": 0.25
+      }
+    }
+  ],
+  "commit": "379e9638da7c5822c97fa8a7955861c3e16ec813",
+  "dirty": false
+}

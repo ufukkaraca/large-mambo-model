@@ -1,0 +1,467 @@
+[
+  {
+    "speaker": "eddy",
+    "musician": null,
+    "note_count": {
+      "ok": 13,
+      "n": 16,
+      "acc": 0.812,
+      "ci95": [
+        0.57,
+        0.934
+      ]
+    },
+    "speech_no_hum": {
+      "ok": 7,
+      "n": 8,
+      "acc": 0.875,
+      "ci95": [
+        0.529,
+        0.978
+      ]
+    },
+    "mixed_containment": {
+      "ok": 6,
+      "n": 6,
+      "acc": 1.0,
+      "ci95": [
+        0.61,
+        1.0
+      ]
+    },
+    "mixed_hum_found": {
+      "ok": 5,
+      "n": 6,
+      "acc": 0.833,
+      "ci95": [
+        0.436,
+        0.97
+      ]
+    },
+    "note_detail": [
+      {
+        "wav": "hold_steady_01.wav",
+        "gt": 1,
+        "detected": 1,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "hold_vibrato_01.wav",
+        "gt": 1,
+        "detected": 2,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "repeat3_01.wav",
+        "gt": 3,
+        "detected": 4,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "repeat4_01.wav",
+        "gt": 4,
+        "detected": 1,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat_fast6_01.wav",
+        "gt": 6,
+        "detected": 4,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "scale_up4_01.wav",
+        "gt": 4,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "scale_down4_01.wav",
+        "gt": 4,
+        "detected": 3,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "legato_slow4_01.wav",
+        "gt": 4,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "legato_slow5_01.wav",
+        "gt": 5,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "legato_tune_01.wav",
+        "gt": 6,
+        "detected": 7,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "legato_updown5_01.wav",
+        "gt": 5,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "edges_silence_01.wav",
+        "gt": 5,
+        "detected": 6,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "edges_abrupt_01.wav",
+        "gt": 5,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "low_melody_01.wav",
+        "gt": 4,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "high_melody_01.wav",
+        "gt": 4,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "doo_melody_01.wav",
+        "gt": 4,
+        "detected": 3,
+        "gt_source": "self-report",
+        "hit": 1
+      }
+    ],
+    "note_count_gt": "self-reported (intended_notes); hand-count not yet verified"
+  },
+  {
+    "speaker": "omer",
+    "musician": false,
+    "note_count": {
+      "ok": 6,
+      "n": 16,
+      "acc": 0.375,
+      "ci95": [
+        0.185,
+        0.614
+      ]
+    },
+    "speech_no_hum": {
+      "ok": 5,
+      "n": 8,
+      "acc": 0.625,
+      "ci95": [
+        0.306,
+        0.863
+      ]
+    },
+    "mixed_containment": {
+      "ok": 6,
+      "n": 6,
+      "acc": 1.0,
+      "ci95": [
+        0.61,
+        1.0
+      ]
+    },
+    "mixed_hum_found": {
+      "ok": 5,
+      "n": 6,
+      "acc": 0.833,
+      "ci95": [
+        0.436,
+        0.97
+      ]
+    },
+    "note_detail": [
+      {
+        "wav": "hold_steady_01.wav",
+        "gt": 1,
+        "detected": 2,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "hold_vibrato_01.wav",
+        "gt": 1,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat3_01.wav",
+        "gt": 3,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat4_01.wav",
+        "gt": 4,
+        "detected": 14,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat_fast6_01.wav",
+        "gt": 6,
+        "detected": 6,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "scale_up4_01.wav",
+        "gt": 4,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "scale_down4_01.wav",
+        "gt": 4,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_slow4_01.wav",
+        "gt": 4,
+        "detected": 19,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_slow5_01.wav",
+        "gt": 5,
+        "detected": 18,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_tune_01.wav",
+        "gt": 6,
+        "detected": 21,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_updown5_01.wav",
+        "gt": 5,
+        "detected": 6,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "edges_silence_01.wav",
+        "gt": 5,
+        "detected": 7,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "edges_abrupt_01.wav",
+        "gt": 5,
+        "detected": 7,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "low_melody_01.wav",
+        "gt": 4,
+        "detected": 4,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "high_melody_01.wav",
+        "gt": 4,
+        "detected": 7,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "doo_melody_01.wav",
+        "gt": 4,
+        "detected": 4,
+        "gt_source": "self-report",
+        "hit": 1
+      }
+    ],
+    "note_count_gt": "self-reported (intended_notes); hand-count not yet verified"
+  },
+  {
+    "speaker": "rim",
+    "musician": null,
+    "note_count": {
+      "ok": 2,
+      "n": 16,
+      "acc": 0.125,
+      "ci95": [
+        0.035,
+        0.36
+      ]
+    },
+    "speech_no_hum": {
+      "ok": 1,
+      "n": 8,
+      "acc": 0.125,
+      "ci95": [
+        0.022,
+        0.471
+      ]
+    },
+    "mixed_containment": {
+      "ok": 6,
+      "n": 6,
+      "acc": 1.0,
+      "ci95": [
+        0.61,
+        1.0
+      ]
+    },
+    "mixed_hum_found": {
+      "ok": 6,
+      "n": 6,
+      "acc": 1.0,
+      "ci95": [
+        0.61,
+        1.0
+      ]
+    },
+    "note_detail": [
+      {
+        "wav": "hold_steady_01.wav",
+        "gt": 1,
+        "detected": 2,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "hold_vibrato_01.wav",
+        "gt": 1,
+        "detected": 4,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat3_01.wav",
+        "gt": 3,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat4_01.wav",
+        "gt": 4,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "repeat_fast6_01.wav",
+        "gt": 6,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "scale_up4_01.wav",
+        "gt": 4,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "scale_down4_01.wav",
+        "gt": 4,
+        "detected": 7,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_slow4_01.wav",
+        "gt": 4,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_slow5_01.wav",
+        "gt": 5,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_tune_01.wav",
+        "gt": 6,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "legato_updown5_01.wav",
+        "gt": 5,
+        "detected": 12,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "edges_silence_01.wav",
+        "gt": 5,
+        "detected": 10,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "edges_abrupt_01.wav",
+        "gt": 5,
+        "detected": 5,
+        "gt_source": "self-report",
+        "hit": 1
+      },
+      {
+        "wav": "low_melody_01.wav",
+        "gt": 4,
+        "detected": 9,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "high_melody_01.wav",
+        "gt": 4,
+        "detected": 6,
+        "gt_source": "self-report",
+        "hit": 0
+      },
+      {
+        "wav": "doo_melody_01.wav",
+        "gt": 4,
+        "detected": 8,
+        "gt_source": "self-report",
+        "hit": 0
+      }
+    ],
+    "note_count_gt": "self-reported (intended_notes); hand-count not yet verified"
+  }
+]

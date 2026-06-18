@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mambo · Sung Takes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#100e10; --bg2:#17141a; --ink:#efe7d8; --dim:#9a8f7e;
+    --amber:#f2b35e; --amber-glow:#ffcf8a; --red:#ff4d44; --green:#7dd66b;
+    --line:#2a2530; --panel:#1b1820;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0; background:
+      radial-gradient(120% 80% at 50% -10%, #221c26 0%, var(--bg) 55%) fixed,
+      var(--bg);
+    color:var(--ink); font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  /* film-grain overlay */
+  body::after{content:""; position:fixed; inset:0; pointer-events:none; opacity:.05; z-index:99;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .wrap{max-width:760px; margin:0 auto; padding:26px 22px 60px; position:relative; z-index:1}
+
+  /* ---- header ---- */
+  header{display:flex; align-items:center; gap:14px; padding-bottom:18px; border-bottom:1px solid var(--line)}
+  .reel{width:34px;height:34px;border-radius:50%;border:2px solid var(--amber);position:relative;flex:0 0 auto;
+    box-shadow:0 0 14px rgba(242,179,94,.25) inset}
+  .reel::before,.reel::after{content:"";position:absolute;inset:0;margin:auto;background:var(--amber)}
+  .reel::before{width:2px;height:14px}.reel::after{width:14px;height:2px}
+  .reel.spin{animation:spin 2.4s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .word{font-family:"Instrument Serif",Georgia,serif; font-size:30px; line-height:1; letter-spacing:.3px}
+  .word b{color:var(--amber); font-style:italic}
+  .tag{font-size:10.5px; letter-spacing:3px; color:var(--dim); text-transform:uppercase; margin-top:3px}
+  .spacer{flex:1}
+  .name-field{display:flex; flex-direction:column; gap:3px; align-items:flex-end}
+  .name-field label{font-size:9.5px; letter-spacing:2px; color:var(--dim); text-transform:uppercase}
+  .name-field input{background:var(--panel); border:1px solid var(--line); color:var(--ink);
+    font-family:inherit; font-size:13px; padding:7px 10px; border-radius:7px; width:150px; text-align:right; outline:none}
+  .name-field input:focus{border-color:var(--amber)}
+
+  /* ---- progress dots ---- */
+  .dots{display:flex; gap:7px; flex-wrap:wrap; margin:18px 0 22px}
+  .dot{width:22px;height:6px;border-radius:3px;background:var(--line);transition:.25s; position:relative}
+  .dot.done{background:var(--green); box-shadow:0 0 8px rgba(125,214,107,.5)}
+  .dot.cur{background:var(--amber); box-shadow:0 0 10px rgba(242,179,94,.6)}
+  .dot.ctrl{opacity:.55}
+
+  /* ---- take card ---- */
+  .card{background:linear-gradient(180deg,var(--panel),#15121a); border:1px solid var(--line);
+    border-radius:18px; padding:30px 30px 26px; box-shadow:0 30px 60px -30px #000, 0 0 0 1px rgba(255,255,255,.02) inset}
+  .takeno{font-size:11px;letter-spacing:3px;color:var(--dim);text-transform:uppercase;display:flex;justify-content:space-between}
+  .takeno .k{color:var(--amber)}
+  .prompt{font-family:"Instrument Serif",Georgia,serif; font-size:33px; line-height:1.32; margin:14px 0 6px; letter-spacing:.2px}
+  .frame{color:var(--ink)}
+  .sung{display:inline-block; color:#1a1118; background:linear-gradient(180deg,var(--amber-glow),var(--amber));
+    padding:1px 14px; border-radius:30px; font-style:italic; box-shadow:0 4px 18px -4px rgba(242,179,94,.6); white-space:nowrap}
+  .sung.hum{background:none; color:var(--amber); border:1px dashed rgba(242,179,94,.6); box-shadow:none}
+  .hint{font-size:12.5px; color:var(--dim); margin:4px 0 20px; line-height:1.55}
+  .hint b{color:var(--ink); font-weight:500}
+
+  .meta{display:flex; gap:14px; margin:0 0 22px; flex-wrap:wrap}
+  .field{flex:1; min-width:200px; display:flex; flex-direction:column; gap:6px}
+  .field.small{flex:0 0 130px; min-width:0}
+  .field label{font-size:10px;letter-spacing:2px;color:var(--dim);text-transform:uppercase}
+  .field input{background:#0e0c11;border:1px solid var(--line);color:var(--ink);font-family:inherit;
+    font-size:15px;padding:11px 13px;border-radius:9px;outline:none;transition:.15s}
+  .field input:focus{border-color:var(--amber); box-shadow:0 0 0 3px rgba(242,179,94,.12)}
+  .field.serif input{font-family:"Instrument Serif",Georgia,serif; font-size:19px}
+
+  /* ---- transport ---- */
+  .transport{display:flex;align-items:center;gap:20px;margin-top:6px}
+  .recwrap{position:relative;flex:0 0 auto}
+  .recBtn{width:74px;height:74px;border-radius:50%;border:none;cursor:pointer;
+    background:radial-gradient(circle at 50% 38%, #ff6a60, var(--red)); color:#fff;
+    font-size:11px;letter-spacing:1px;font-family:inherit;font-weight:700;
+    box-shadow:0 8px 24px -6px rgba(255,77,68,.7), 0 0 0 1px rgba(255,255,255,.1) inset; transition:.15s}
+  .recBtn:active{transform:scale(.95)}
+  .recBtn.live{background:radial-gradient(circle at 50% 38%, #3a2a2e, #241b20); color:var(--red)}
+  .recBtn.live::after,.ring{content:"";position:absolute;inset:-7px;border-radius:50%;border:2px solid var(--red);
+    opacity:0;animation:none}
+  .recBtn.live + .ring{animation:pulse 1.1s ease-out infinite}
+  @keyframes pulse{0%{opacity:.7;transform:scale(.95)}100%{opacity:0;transform:scale(1.35)}}
+  .meter{flex:1;height:14px;border-radius:8px;background:#0c0a0e;border:1px solid var(--line);overflow:hidden;position:relative}
+  .meter .lvl{height:100%;width:0%;background:linear-gradient(90deg,var(--green),var(--amber) 70%,var(--red));transition:width .05s linear}
+  .clock{font-size:22px;color:var(--amber);min-width:62px;text-align:right;font-variant-numeric:tabular-nums}
+
+  .row{display:flex;gap:10px;margin-top:20px}
+  .btn{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--ink);font-family:inherit;
+    font-size:13px;padding:13px;border-radius:10px;cursor:pointer;transition:.15s;letter-spacing:.5px}
+  .btn:hover:not(:disabled){border-color:var(--amber);color:var(--amber-glow)}
+  .btn:disabled{opacity:.32;cursor:not-allowed}
+  .btn.go{background:linear-gradient(180deg,var(--amber-glow),var(--amber));color:#1a1118;border:none;font-weight:700}
+  .btn.go:hover:not(:disabled){filter:brightness(1.08)}
+  audio{width:100%;margin-top:16px;display:none;filter:invert(.9) hue-rotate(180deg)}
+  .msg{margin-top:16px;font-size:12.5px;min-height:18px;letter-spacing:.3px}
+  .msg.ok{color:var(--green)} .msg.err{color:var(--red)} .msg.rec{color:var(--red)}
+  .keys{margin-top:26px;font-size:11px;color:var(--dim);text-align:center;letter-spacing:.5px;line-height:1.9}
+  .keys kbd{background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:2px 7px;color:var(--ink);font-family:inherit;font-size:10.5px}
+
+  /* ---- done ---- */
+  .done{text-align:center;padding:40px 20px}
+  .done .big{font-family:"Instrument Serif",serif;font-size:46px;color:var(--amber);font-style:italic}
+  .done p{color:var(--dim);font-size:13.5px;line-height:1.7;margin:8px auto;max-width:440px}
+  .done code{background:#0c0a0e;border:1px solid var(--line);padding:11px 14px;border-radius:9px;
+    display:inline-block;margin-top:14px;color:var(--amber-glow);font-size:12.5px}
+  .fadein{animation:fade .5s ease both}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="reel" id="reel"></div>
+    <div>
+      <div class="word">Mambo <b>sung takes</b></div>
+      <div class="tag">dual-decode · melody + lyric</div>
+    </div>
+    <div class="spacer"></div>
+    <div class="name-field">
+      <label for="who">voice / name</label>
+      <input id="who" placeholder="your name" autocomplete="off" spellcheck="false">
+    </div>
+  </header>
+
+  <div class="dots" id="dots"></div>
+  <div id="card"></div>
+
+  <div class="keys">
+    <kbd>Space</kbd> record / stop &nbsp;·&nbsp; <kbd>P</kbd> play &nbsp;·&nbsp; <kbd>R</kbd> redo &nbsp;·&nbsp; <kbd>↵</kbd> save &amp; next
+  </div>
+</div>
+
+<script>
+// ---- the 11 takes -----------------------------------------------------------
+const SUNG = (frame, lyric, after="") => ({type:"sung", frame, lyric, after});
+const HUM  = (frame, after="") => ({type:"sung_control", frame, after});
+const ITEMS = [
+  SUNG("give me something like", "we were younger then"),
+  SUNG("make the chorus go", "hold on to me now"),
+  SUNG("something like", "dancing in the dark", "but slower"),
+  SUNG("what about", "here comes the sun again"),
+  SUNG("give me a hook like", "all of the lights tonight"),
+  SUNG("the drop goes", "never gonna let you down"),
+  SUNG("something warmer like", "float on for a while"),
+  SUNG("make it go", "somebody could love me"),
+  HUM("give me something like"),
+  HUM("the bassline goes"),
+  HUM("something like", "but bigger"),
+].map((it,i)=>{
+  const n = String(i+1).padStart(2,"0");
+  it.file = (it.type==="sung" ? "sung_demo_" : "sung_control_") +
+            String(it.type==="sung" ? i+1 : i-7).padStart(2,"0") + ".wav";
+  it.notes = it.type==="sung" ? it.lyric.trim().split(/\s+/).length + 1 : 4;
+  return it;
+});
+
+// ---- state ------------------------------------------------------------------
+let idx=0, saved=new Set(), lastWav=null;
+let stream, audioCtx, analyser, mediaRecorder, chunks=[], timerId, rafId, t0=0;
+const card=document.getElementById("card"), dotsEl=document.getElementById("dots"), reel=document.getElementById("reel");
+const whoEl=document.getElementById("who");
+const name=()=> (whoEl.value||"").trim();
+
+whoEl.addEventListener("input", ()=>{ localStorage.setItem("mambo_who", whoEl.value); refreshSaved().then(render); });
+whoEl.value = localStorage.getItem("mambo_who")||"";
+
+async function refreshSaved(){
+  if(!name()){ saved=new Set(); return; }
+  try{ const r=await fetch("/status?name="+encodeURIComponent(name())); saved=new Set((await r.json()).saved||[]); }catch(e){}
+}
+
+function drawDots(){
+  dotsEl.innerHTML="";
+  ITEMS.forEach((it,i)=>{
+    const d=document.createElement("div");
+    d.className="dot"+(saved.has(it.file)?" done":"")+(i===idx?" cur":"")+(it.type==="sung_control"?" ctrl":"");
+    d.title=it.file; d.onclick=()=>goto(i); dotsEl.appendChild(d);
+  });
+}
+
+function promptHTML(it){
+  const pill = it.type==="sung"
+    ? `<span class="sung">♪ ${it.lyric} ♪</span>`
+    : `<span class="sung hum">♪ hum — no words ♪</span>`;
+  const tail = it.after ? ` <span class="frame">${it.after}</span>` : "";
+  return `<span class="frame">${it.frame}</span> ${pill}${tail}`;
+}
+
+function render(){
+  if(idx>=ITEMS.length) return renderDone();
+  drawDots();
+  const it=ITEMS[idx], done=saved.has(it.file);
+  const isSung=it.type==="sung";
+  card.className="card fadein";
+  card.innerHTML=`
+    <div class="takeno"><span>Take ${idx+1} / ${ITEMS.length}</span>
+      <span class="k">${isSung?"SUNG LYRIC":"WORDLESS HUM (control)"} · ${it.file}</span></div>
+    <div class="prompt">${promptHTML(it)}</div>
+    <div class="hint">${isSung
+      ? `Say the frame out loud, then <b>sing</b> the words on a little tune. Use these words or your own — just put <b>what you actually sang</b> below. No need to count notes — that's detected automatically.`
+      : `Say the frame, then <b>hum</b> a short tune with <b>no words at all</b>. (Proves we don't invent a lyric on a wordless hum.)`}</div>
+    ${isSung?`
+    <div class="meta">
+      <div class="field serif"><label>words you sang</label>
+        <input id="lyric" value="${it.lyric}" autocomplete="off" spellcheck="false"></div>
+      <div class="field small"><label>≈ notes · optional</label>
+        <input id="count" type="number" min="1" max="20" placeholder="auto" value=""></div>
+    </div>`:""}
+    <div class="transport">
+      <div class="recwrap">
+        <button class="recBtn" id="recBtn">● REC</button><span class="ring" style="display:none"></span>
+      </div>
+      <div class="meter"><div class="lvl" id="lvl"></div></div>
+      <div class="clock" id="clock">0.0s</div>
+    </div>
+    <audio id="player" controls></audio>
+    <div class="row">
+      <button class="btn" id="playBtn" disabled>▶ Play</button>
+      <button class="btn" id="redoBtn" disabled>↺ Redo</button>
+      <button class="btn go" id="saveBtn" ${done?"":"disabled"}>${done?"✓ Saved · Next":"Save &amp; Next →"}</button>
+    </div>
+    <div class="msg ${done?"ok":""}" id="msg">${done?"Already recorded — re-record to replace, or Next.":""}</div>`;
+  lastWav=null;
+  document.getElementById("recBtn").onclick=toggleRec;
+  document.getElementById("playBtn").onclick=play;
+  document.getElementById("redoBtn").onclick=()=>render();
+  document.getElementById("saveBtn").onclick=()=> done&&!lastWav ? goto(idx+1) : save();
+}
+
+function renderDone(){
+  drawDots(); reel.classList.remove("spin");
+  const n=saved.size;
+  const fb=JSON.parse(localStorage.getItem("mambo_fallback_manifest")||"[]");
+  card.className="card fadein";
+  let fbBlock="";
+  if(fb.length){
+    const dir="fixtures/human/sung/"+(_slug(name())||"<name>");
+    fbBlock=`<div style="margin-top:22px;padding:16px;border:1px dashed var(--amber);border-radius:12px;text-align:left">
+      <p style="margin:0 0 8px"><b style="color:var(--amber)">${fb.length} take(s) were downloaded</b> (the server didn't answer).
+      Drop those WAVs from your Downloads into <b>${dir}/</b>, then grab the manifest:</p>
+      <button class="btn go" style="max-width:240px" onclick="dlManifest()">⤓ download manifest.jsonl</button>
+      <p style="margin:8px 0 0;font-size:11px">…and put it in the same folder.</p></div>`;
+  }
+  card.innerHTML=`<div class="done">
+    <div class="big">that's a wrap</div>
+    <p>${n} take${n===1?"":"s"} saved into <b>fixtures/human/sung/${_slug(name())||"&lt;name&gt;"}/</b>.
+       Raw audio stays git-ignored; only the derived metrics get committed.</p>
+    ${fbBlock}
+    <p style="margin-top:16px">Then run the dual-decode eval:</p>
+    <code>cd lab &amp;&amp; uv run python -m mambo_lab.eval.dual_decode_eval</code>
+    <p style="margin-top:18px">Want to redo any? <a href="#" style="color:var(--amber)" onclick="goto(0);return false">back to take 1 →</a></p>
+  </div>`;
+}
+function _slug(s){ return (s||"").trim().toLowerCase().replace(/\s+/g,"_").replace(/[^a-z0-9_-]/g,""); }
+function dlManifest(){
+  const fb=JSON.parse(localStorage.getItem("mambo_fallback_manifest")||"[]");
+  const body=fb.map(e=>JSON.stringify(e)).join("\n")+"\n";
+  const a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([body],{type:"application/x-ndjson"}));
+  a.download="manifest.jsonl"; document.body.appendChild(a); a.click(); a.remove();
+}
+
+function goto(i){ if(mediaRecorder&&mediaRecorder.state==="recording") stopRec(); idx=Math.max(0,Math.min(ITEMS.length,i)); render(); }
+function setMsg(t,cls=""){ const m=document.getElementById("msg"); if(m){ m.textContent=t; m.className="msg "+cls; } }
+
+// ---- recording (proven core) ------------------------------------------------
+async function toggleRec(){
+  if(!name()){ whoEl.focus(); whoEl.style.borderColor="var(--red)"; setMsg("Enter your name first (top-right) — it's the folder your takes save into.","err"); return; }
+  if(mediaRecorder&&mediaRecorder.state==="recording"){ stopRec(); return; }
+  try{ stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false}}); }
+  catch(e){ setMsg("Mic blocked — allow microphone access for this page and retry.","err"); return; }
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)({sampleRate:48000});
+  const src=audioCtx.createMediaStreamSource(stream); analyser=audioCtx.createAnalyser(); analyser.fftSize=1024; src.connect(analyser); meterLoop();
+  chunks=[]; mediaRecorder=new MediaRecorder(stream);
+  mediaRecorder.ondataavailable=e=>chunks.push(e.data); mediaRecorder.onstop=finishTake; mediaRecorder.start();
+  t0=performance.now(); timerId=setInterval(tick,100); tick();
+  reel.classList.add("spin");
+  const b=document.getElementById("recBtn"); b.textContent="■ STOP"; b.classList.add("live");
+  const ring=b.nextElementSibling; if(ring) ring.style.display="block";
+  setMsg("Recording… ■ Stop (or Space) when done.","rec");
+}
+function stopRec(){ if(!mediaRecorder||mediaRecorder.state!=="recording") return; clearInterval(timerId); mediaRecorder.stop(); stream.getTracks().forEach(t=>t.stop()); cancelAnimationFrame(rafId); reel.classList.remove("spin"); const l=document.getElementById("lvl"); if(l) l.style.width="0%"; }
+async function finishTake(){
+  const buf=await new Blob(chunks).arrayBuffer(); let ab;
+  try{ ab=await audioCtx.decodeAudioData(buf); }catch(e){ setMsg("Could not decode — try again.","err"); resetRecBtn(); return; }
+  lastWav=encodeWAV(ab);
+  const p=document.getElementById("player"); p.src=URL.createObjectURL(new Blob([lastWav],{type:"audio/wav"})); p.style.display="block";
+  document.getElementById("playBtn").disabled=false; document.getElementById("redoBtn").disabled=false; document.getElementById("saveBtn").disabled=false;
+  resetRecBtn(); setMsg("Got it — play it back, or Save &amp; Next.","ok");
+}
+function resetRecBtn(){ const b=document.getElementById("recBtn"); if(b){ b.textContent="● REC"; b.classList.remove("live"); const r=b.nextElementSibling; if(r) r.style.display="none"; } }
+function play(){ const p=document.getElementById("player"); if(p){ p.currentTime=0; p.play(); } }
+function tick(){ const el=document.getElementById("clock"); if(el) el.textContent=((performance.now()-t0)/1000).toFixed(1)+"s"; }
+function meterLoop(){ const buf=new Uint8Array(analyser.frequencyBinCount); const step=()=>{ if(!analyser) return; analyser.getByteTimeDomainData(buf); let s=0; for(let i=0;i<buf.length;i++){ const v=(buf[i]-128)/128; s+=v*v; } const l=document.getElementById("lvl"); if(l) l.style.width=Math.min(100,Math.sqrt(s/buf.length)*260)+"%"; rafId=requestAnimationFrame(step); }; step(); }
+
+async function postSave(params){
+  // fresh connection each attempt; one retry covers a transient socket race.
+  for(let attempt=0; attempt<2; attempt++){
+    try{
+      const r=await fetch("/save?"+new URLSearchParams(params).toString(),{method:"POST",cache:"no-store",keepalive:false,
+        headers:{"Content-Type":"application/octet-stream"},
+        body:lastWav.buffer.slice(lastWav.byteOffset,lastWav.byteOffset+lastWav.byteLength)});
+      const j=await r.json(); if(!j.ok) throw new Error(j.error||"save failed");
+      return j;
+    }catch(e){ if(attempt===1) throw e; await new Promise(r=>setTimeout(r,250)); }
+  }
+}
+function downloadFallback(it, params){
+  // never lose a take: download the WAV (correctly named) + remember the manifest line.
+  const url=URL.createObjectURL(new Blob([lastWav],{type:"audio/wav"}));
+  const a=document.createElement("a"); a.href=url; a.download=it.file; document.body.appendChild(a); a.click(); a.remove();
+  const entry={wav:it.file, kind:it.type}; if(params.lyric) entry.lyric=params.lyric;
+  if(params.intended_notes) { entry.intended_notes=params.intended_notes; entry.tol=1; }
+  const man=JSON.parse(localStorage.getItem("mambo_fallback_manifest")||"[]").filter(e=>e.wav!==it.file);
+  man.push(entry); localStorage.setItem("mambo_fallback_manifest", JSON.stringify(man));
+  saved.add(it.file);
+}
+async function save(){
+  if(!lastWav){ goto(idx+1); return; }
+  if(!name()){ whoEl.focus(); setMsg("Enter your name first.","err"); return; }
+  const it=ITEMS[idx];
+  const params={file:it.file, name:name(), kind:it.type};
+  if(it.type==="sung"){
+    params.lyric=(document.getElementById("lyric").value||it.lyric).trim();
+    const c=parseInt(document.getElementById("count").value,10);
+    if(c>0){ params.intended_notes=c; params.tol=1; }   // optional — omitted if blank
+  }
+  setMsg("Saving…");
+  try{
+    const j=await postSave(params);
+    saved=new Set(j.saved||[]); setMsg("Saved ✓ → "+(j.dir||""),"ok"); setTimeout(()=>goto(idx+1),220);
+  }catch(e){
+    if(location.protocol==="file:"){ setMsg("Opened as a file — use the http://localhost:8732 URL from `make sung-recorder`.","err"); return; }
+    // server unreachable: download the take so nothing is lost, then move on.
+    downloadFallback(it, params);
+    setMsg("Server didn't answer — downloaded "+it.file+" to your Downloads instead. Keep going; I'll collect them at the end.","ok");
+    setTimeout(()=>goto(idx+1),900);
+  }
+}
+
+function encodeWAV(audioBuffer){
+  const nc=audioBuffer.numberOfChannels, sr=audioBuffer.sampleRate, len=audioBuffer.length, mono=new Float32Array(len);
+  for(let c=0;c<nc;c++){ const d=audioBuffer.getChannelData(c); for(let i=0;i<len;i++) mono[i]+=d[i]/nc; }
+  const ab=new ArrayBuffer(44+len*2), v=new DataView(ab), w=(o,s)=>{ for(let i=0;i<s.length;i++) v.setUint8(o+i,s.charCodeAt(i)); };
+  w(0,"RIFF"); v.setUint32(4,36+len*2,true); w(8,"WAVE"); w(12,"fmt "); v.setUint32(16,16,true); v.setUint16(20,1,true);
+  v.setUint16(22,1,true); v.setUint32(24,sr,true); v.setUint32(28,sr*2,true); v.setUint16(32,2,true); v.setUint16(34,16,true);
+  w(36,"data"); v.setUint32(40,len*2,true); let o=44; for(let i=0;i<len;i++){ let s=Math.max(-1,Math.min(1,mono[i])); v.setInt16(o,s<0?s*0x8000:s*0x7FFF,true); o+=2; }
+  return new Uint8Array(ab);
+}
+
+document.addEventListener("keydown",e=>{
+  if(e.target.tagName==="INPUT"){ if(e.key==="Enter") e.target.blur(); return; }
+  if(e.code==="Space"){ e.preventDefault(); toggleRec(); }
+  else if(e.key==="p"||e.key==="P"){ const b=document.getElementById("playBtn"); if(b&&!b.disabled) play(); }
+  else if(e.key==="r"||e.key==="R"){ render(); }
+  else if(e.key==="Enter"){ const b=document.getElementById("saveBtn"); if(b&&!b.disabled) save(); }
+  else if(e.key==="ArrowRight"){ goto(idx+1); } else if(e.key==="ArrowLeft"){ goto(idx-1); }
+});
+
+(async()=>{
+  if(location.protocol==="file:"){
+    card.className="card";
+    card.innerHTML=`<div class="done"><div class="big">⚠ opened as a file</div>
+      <p>This page can't save recordings when opened directly. Run
+      <code>make sung-recorder</code> and open the <b>http://localhost:8732</b> URL it prints.</p></div>`;
+    return;
+  }
+  await refreshSaved(); render();
+})();
+</script>
+</body>
+</html>

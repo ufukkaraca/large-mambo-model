@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use Mambo or MamboBench, please cite this work."
+title: "Mambo: Mixed Vocal Utterance Parsing for a DAW Producer Co-Pilot"
+abstract: >-
+  Jointly segmenting and transcribing utterances that interleave spoken
+  instructions with hummed melody (and vocal percussion) into a structured
+  representation (mambo.utterance.v1), with a producer-co-pilot application that
+  emits a replayable action plan and MIDI. Includes MamboBench, a benchmark for
+  Mixed Vocal Utterance Parsing.
+version: "0.1.0"
+date-released: "2026-06-18"
+authors:
+  - family-names: Karaca
+    given-names: Ufuk
+    affiliation: "Rodyr, Inc."
+# AI tools (Claude Opus 4.8, Claude Fable 5) implemented and evaluated the system under
+# the author's direction; per ICMJE/COPE and venue policy they are credited in the
+# AI-contribution statement (PAPER.md §7.1), not listed as authors (an AI cannot hold
+# authorship accountability). The author takes full responsibility for the work.
+type: software
+license: MIT
+repository-code: "https://github.com/ufukkaraca/large-mambo-model"
+keywords:
+  - music information retrieval
+  - audio segmentation
+  - voice interface
+  - DAW
+  - humming transcription

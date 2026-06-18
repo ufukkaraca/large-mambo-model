@@ -1,0 +1,158 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_warmer_071_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.959,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.9003,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.1039,
+      "t1": 5.6806,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 1.1039,
+          "dur": 0.8558,
+          "vel": 80
+        },
+        {
+          "midi": 70,
+          "name": "A#4",
+          "t0": 2.0341,
+          "dur": 0.4279,
+          "vel": 86
+        },
+        {
+          "midi": 71,
+          "name": "B4",
+          "t0": 2.4992,
+          "dur": 0.214,
+          "vel": 97
+        },
+        {
+          "midi": 75,
+          "name": "D#5",
+          "t0": 2.7318,
+          "dur": 0.4279,
+          "vel": 95
+        },
+        {
+          "midi": 77,
+          "name": "F5",
+          "t0": 3.1969,
+          "dur": 0.6419,
+          "vel": 85
+        },
+        {
+          "midi": 80,
+          "name": "G#5",
+          "t0": 3.8946,
+          "dur": 0.4279,
+          "vel": 101
+        },
+        {
+          "midi": 78,
+          "name": "F#5",
+          "t0": 4.3597,
+          "dur": 0.4279,
+          "vel": 103
+        },
+        {
+          "midi": 78,
+          "name": "F#5",
+          "t0": 4.8248,
+          "dur": 0.8558,
+          "vel": 102
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "F# major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 129.0,
+          "confidence": 1.0
+        },
+        "contour": "u u u u u d ="
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 659.26
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 5.8645,
+      "t1": 6.959,
+      "confidence": 1.0,
+      "text": "on something warmer"
+    }
+  ],
+  "session_context": {
+    "daw": "garageband",
+    "selected_track": {
+      "index": 2,
+      "name": "Keys",
+      "kind": "software_instrument"
+    },
+    "tracks": [
+      {
+        "index": 0,
+        "name": "Drums",
+        "kind": "drummer"
+      },
+      {
+        "index": 1,
+        "name": "Bass",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 2,
+        "name": "Keys",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 3,
+        "name": "Lead",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 4,
+        "name": "Vocal",
+        "kind": "audio"
+      },
+      {
+        "index": 5,
+        "name": "Guitar",
+        "kind": "audio"
+      },
+      {
+        "index": 6,
+        "name": "Hats",
+        "kind": "drummer"
+      }
+    ],
+    "project_tempo_bpm": 120,
+    "project_key": "C major",
+    "transport": "stopped"
+  }
+}

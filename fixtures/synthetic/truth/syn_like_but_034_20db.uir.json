@@ -1,0 +1,96 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_034_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 5.9016,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1382,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.2492,
+      "t1": 4.8492,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 1.2492,
+          "dur": 0.9684,
+          "vel": 92
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 2.3018,
+          "dur": 0.4842,
+          "vel": 78
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 2.8281,
+          "dur": 0.2421,
+          "vel": 89
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 3.0913,
+          "dur": 0.2421,
+          "vel": 79
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 3.3545,
+          "dur": 0.4842,
+          "vel": 81
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 3.8808,
+          "dur": 0.9684,
+          "vel": 86
+        }
+      ],
+      "analysis": {
+        "n_notes": 6,
+        "key_candidates": [
+          {
+            "key": "B minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 114.0,
+          "confidence": 1.0
+        },
+        "contour": "d d u d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 207.65
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 5.1899,
+      "t1": 5.9016,
+      "confidence": 1.0,
+      "text": "but softer"
+    }
+  ]
+}

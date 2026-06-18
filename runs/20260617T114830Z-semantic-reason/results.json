@@ -1,0 +1,637 @@
+{
+  "n": 77,
+  "rules": {
+    "overall": 0.961,
+    "command": "13/14",
+    "demonstration": "14/16",
+    "confabulation": "47/47"
+  },
+  "llm": {
+    "overall": 0.974,
+    "command": "14/14",
+    "demonstration": "15/16",
+    "confabulation": "46/47"
+  },
+  "est_cost_usd": 0.0288,
+  "per_item": [
+    {
+      "uid": "syn_speech_command_000_clean",
+      "text": "kick the drums up a bit",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_001_clean",
+      "text": "make the bass a little louder",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_002_clean",
+      "text": "mute the keys",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_003_clean",
+      "text": "solo the lead track",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_004_clean",
+      "text": "start recording on the selected track",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_005_clean",
+      "text": "go back to the start and play",
+      "has_hum": false,
+      "role": "command",
+      "rules": "confabulation",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_006_clean",
+      "text": "add a new software instrument track",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_007_clean",
+      "text": "bring the reverb down on the vocal",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_008_clean",
+      "text": "turn the hi-hats down",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_009_clean",
+      "text": "pan the guitar left",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_010_clean",
+      "text": "loop the chorus",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_011_clean",
+      "text": "drop the tempo a little",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_012_clean",
+      "text": "kick the drums up a bit",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_speech_command_013_clean",
+      "text": "make the bass a little louder",
+      "has_hum": false,
+      "role": "command",
+      "rules": "command",
+      "llm": "command"
+    },
+    {
+      "uid": "syn_like_but_026_clean",
+      "text": "give me something like but slower",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_027_clean",
+      "text": "give me something like but faster",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_028_clean",
+      "text": "give me something like but a bit higher",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_029_clean",
+      "text": "give me something like but softer",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_030_clean",
+      "text": "give me something like and warmer",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_031_clean",
+      "text": "give me something like but slower",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_032_clean",
+      "text": "give me something like but faster",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_033_clean",
+      "text": "give me something like but a bit higher",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_034_clean",
+      "text": "give me something like but softer",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_035_clean",
+      "text": "give me something like and warmer",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_036_clean",
+      "text": "give me something like but slower",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_037_clean",
+      "text": "give me something like but faster",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_038_clean",
+      "text": "give me something like but a bit higher",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_like_but_039_clean",
+      "text": "give me something like but softer",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "demonstration",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_contrast_056_clean",
+      "text": "make it go instead of",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "confabulation",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "syn_contrast_057_clean",
+      "text": "make it go instead of",
+      "has_hum": true,
+      "role": "demonstration",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "syn_pure_hum_015_10db",
+      "text": "Mmm, mmm, mmm, mmm, mmm, mmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "syn_pure_hum_016_10db",
+      "text": "You",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat3_01.wav",
+      "text": "Duh, duh, duh.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat4_01.wav",
+      "text": "Da, da, da, da, da.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat_fast6_01.wav",
+      "text": "Duh, duh, duh, duh, duh, duh.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_up4_01.wav",
+      "text": "Dada Dada Dada",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_down4_01.wav",
+      "text": "Oh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow4_01.wav",
+      "text": "Mm-hmm. Mm hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow5_01.wav",
+      "text": "Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_tune_01.wav",
+      "text": "Mmm. Mmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_updown5_01.wav",
+      "text": "Mm-hmm. Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "edges_abrupt_01.wav",
+      "text": "Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "low_melody_01.wav",
+      "text": ". . . .",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "high_melody_01.wav",
+      "text": "Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "doo_melody_01.wav",
+      "text": "D-O-D-O-D-O",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "hold_steady_01.wav",
+      "text": "D.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "demonstration"
+    },
+    {
+      "uid": "hold_vibrato_01.wav",
+      "text": "Love",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat3_01.wav",
+      "text": "Da, Da, Da, Da, Da, Da, Da.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat4_01.wav",
+      "text": "Do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat_fast6_01.wav",
+      "text": "Ta da da da da da da. Ta. Oh.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_up4_01.wav",
+      "text": "Don't, Don't, Don't, Don't.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_down4_01.wav",
+      "text": "Duh-duh-duh-duh-duh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow4_01.wav",
+      "text": "La, La see, Do Phaa, Phaa, Phaa, Phaa, La, La see, Do Phaa, Phaa, Phaa, Phaa.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow5_01.wav",
+      "text": "Do re mi fa do re mi fa so la si do",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_tune_01.wav",
+      "text": "Oh, oh, oh, oh.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_updown5_01.wav",
+      "text": "Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "edges_silence_01.wav",
+      "text": "Mm. Mm. Mm. Mm. Mm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "edges_abrupt_01.wav",
+      "text": "Mm-hmm.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "low_melody_01.wav",
+      "text": "La, la, la.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "high_melody_01.wav",
+      "text": "No, no, no, no, no.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "doo_melody_01.wav",
+      "text": "Do do do do do",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "hold_steady_01.wav",
+      "text": "Hoooooo!",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "hold_vibrato_01.wav",
+      "text": "Haaahhhhhhhhhhhhhhhhhhhhhhhhhh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat3_01.wav",
+      "text": "Da, da, da, da.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat4_01.wav",
+      "text": "Duh, duh, duh, duh, duh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "repeat_fast6_01.wav",
+      "text": "dah dah dah dah dah dah",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_up4_01.wav",
+      "text": "Da da da da da.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "scale_down4_01.wav",
+      "text": "Da da da da da.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow4_01.wav",
+      "text": "Oh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_slow5_01.wav",
+      "text": "ahhhhhhhhhhhhh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_tune_01.wav",
+      "text": "Oh",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "legato_updown5_01.wav",
+      "text": "Ah",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "edges_silence_01.wav",
+      "text": "Ah, ah, ah.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "edges_abrupt_01.wav",
+      "text": "Ah, ah, ah.",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "low_melody_01.wav",
+      "text": "Blah!",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "high_melody_01.wav",
+      "text": "Hello",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    },
+    {
+      "uid": "doo_melody_01.wav",
+      "text": "Do do do do do",
+      "has_hum": true,
+      "role": "confabulation",
+      "rules": "confabulation",
+      "llm": "confabulation"
+    }
+  ],
+  "model": "gpt-5-mini",
+  "commit": "03e2eda0bf2e54e82a9977824ee81f8b2f093474",
+  "dirty": false
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_hum_first_049_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.5428,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 4.7657,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 0.0,
+          "dur": 1.0514,
+          "vel": 86
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 1.1429,
+          "dur": 0.7886,
+          "vel": 102
+        },
+        {
+          "midi": 56,
+          "name": "G#3",
+          "t0": 2.0,
+          "dur": 0.5257,
+          "vel": 83
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 2.5714,
+          "dur": 0.5257,
+          "vel": 102
+        },
+        {
+          "midi": 56,
+          "name": "G#3",
+          "t0": 3.1429,
+          "dur": 0.2629,
+          "vel": 101
+        },
+        {
+          "midi": 52,
+          "name": "E3",
+          "t0": 3.4286,
+          "dur": 0.2629,
+          "vel": 97
+        },
+        {
+          "midi": 47,
+          "name": "B2",
+          "t0": 3.7143,
+          "dur": 1.0514,
+          "vel": 92
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "B major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 105.0,
+          "confidence": 1.0
+        },
+        "contour": "d d u d d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 207.65
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 4.9599,
+      "t1": 6.5428,
+      "confidence": 1.0,
+      "text": "that, but on strings"
+    }
+  ]
+}

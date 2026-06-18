@@ -1,0 +1,187 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_contrast_061_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 17.5127,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.7728,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "make it go"
+    },
+    {
+      "kind": "melody",
+      "t0": 0.8826,
+      "t1": 9.4405,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 0.8826,
+          "dur": 1.4526,
+          "vel": 79
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 2.4615,
+          "dur": 1.4526,
+          "vel": 83
+        },
+        {
+          "midi": 69,
+          "name": "A4",
+          "t0": 4.0405,
+          "dur": 1.4526,
+          "vel": 97
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 5.6194,
+          "dur": 0.3632,
+          "vel": 90
+        },
+        {
+          "midi": 69,
+          "name": "A4",
+          "t0": 6.0142,
+          "dur": 0.7263,
+          "vel": 84
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 6.8037,
+          "dur": 1.0895,
+          "vel": 97
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 7.9879,
+          "dur": 1.4526,
+          "vel": 92
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "E minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 76.0,
+          "confidence": 1.0
+        },
+        "contour": "u u d u d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 392.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 9.7449,
+      "t1": 10.4571,
+      "confidence": 1.0,
+      "text": "instead of"
+    },
+    {
+      "kind": "melody",
+      "t0": 10.701,
+      "t1": 17.4528,
+      "confidence": 1.0,
+      "role": "contrast",
+      "notes": [
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 10.701,
+          "dur": 1.3301,
+          "vel": 97
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 12.1468,
+          "dur": 0.3325,
+          "vel": 93
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 12.5082,
+          "dur": 0.6651,
+          "vel": 86
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 13.2311,
+          "dur": 0.3325,
+          "vel": 83
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 13.5926,
+          "dur": 1.3301,
+          "vel": 89
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 15.0383,
+          "dur": 0.6651,
+          "vel": 78
+        },
+        {
+          "midi": 56,
+          "name": "G#3",
+          "t0": 15.7612,
+          "dur": 0.3325,
+          "vel": 102
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 16.1227,
+          "dur": 1.3301,
+          "vel": 92
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "C minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 83.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u d d d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 261.63
+      }
+    }
+  ]
+}

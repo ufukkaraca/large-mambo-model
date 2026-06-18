@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_037_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 10.226,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1725,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3348,
+      "t1": 9.3395,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 1.3348,
+          "dur": 1.2988,
+          "vel": 92
+        },
+        {
+          "midi": 56,
+          "name": "G#3",
+          "t0": 2.7466,
+          "dur": 1.2988,
+          "vel": 93
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 4.1583,
+          "dur": 0.6494,
+          "vel": 94
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 4.8642,
+          "dur": 0.9741,
+          "vel": 79
+        },
+        {
+          "midi": 50,
+          "name": "D3",
+          "t0": 5.923,
+          "dur": 0.6494,
+          "vel": 85
+        },
+        {
+          "midi": 49,
+          "name": "C#3",
+          "t0": 6.6289,
+          "dur": 1.2988,
+          "vel": 82
+        },
+        {
+          "midi": 45,
+          "name": "A2",
+          "t0": 8.0407,
+          "dur": 1.2988,
+          "vel": 82
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "A major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 85.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d d d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 185.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 9.5006,
+      "t1": 10.226,
+      "confidence": 1.0,
+      "text": "but faster"
+    }
+  ]
+}

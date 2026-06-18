@@ -1,0 +1,142 @@
+{
+  "phase": "R0",
+  "timestamp": "20260615T200812Z",
+  "commit": "977933130af1581c8c957caf89ff339fde6025de",
+  "dirty": true,
+  "rows": [
+    {
+      "name": "melody.note_f1.clean",
+      "metric": "note onset+pitch F1 (50ms/50c)",
+      "threshold": ">= 0.80",
+      "measured": 1.0,
+      "status": "PASS",
+      "detail": "n=70 melody spans"
+    },
+    {
+      "name": "melody.note_f1.10db",
+      "metric": "note F1 @ 10 dB SNR",
+      "threshold": ">= 0.80 target",
+      "measured": 0.9784514714976902,
+      "status": "PASS",
+      "detail": "robustness reference"
+    },
+    {
+      "name": "melody.key_top2",
+      "metric": "key top-2 acc (>=5-note spans)",
+      "threshold": ">= 0.85",
+      "measured": 0.9714285714285714,
+      "status": "PASS",
+      "detail": "n=70"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green (ir + units)",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    },
+    {
+      "name": "router.segment_f1.clean",
+      "metric": "joint segment F1 (clean)",
+      "threshold": ">= 0.90",
+      "measured": 0.9368253968253968,
+      "status": "PASS",
+      "detail": "acoustic=0.771 linguistic=0.866"
+    },
+    {
+      "name": "router.segment_f1.10db",
+      "metric": "joint segment F1 (10 dB)",
+      "threshold": ">= 0.85",
+      "measured": 0.9011851851851852,
+      "status": "PASS",
+      "detail": "noise robustness"
+    },
+    {
+      "name": "router.boundary",
+      "metric": "boundary error median",
+      "threshold": "<= 250 ms",
+      "measured": 72.40000000000002,
+      "status": "PASS",
+      "detail": "72 ms"
+    },
+    {
+      "name": "router.hallucination",
+      "metric": "text on melody spans",
+      "threshold": "<= 2%",
+      "measured": 0.0,
+      "status": "PASS",
+      "detail": "0.0%"
+    },
+    {
+      "name": "router.ablation",
+      "metric": "joint >= max(acoustic, linguistic)",
+      "threshold": "joint wins",
+      "measured": 0.9368253968253968,
+      "status": "PASS",
+      "detail": "joint 0.937 vs ac 0.771 / ling 0.866"
+    },
+    {
+      "name": "e2e.make_uir",
+      "metric": "file -> UIR pipeline validates",
+      "threshold": "runs",
+      "measured": null,
+      "status": "PASS",
+      "detail": "fuse.file_to_uir"
+    },
+    {
+      "name": "h.elive.note_count",
+      "metric": "live note-count within \u00b11 (real hums)",
+      "threshold": ">= 0.80",
+      "measured": 0.9047619047619048,
+      "status": "PASS",
+      "detail": "19/21 note clips"
+    },
+    {
+      "name": "h.elive.speech_no_hum",
+      "metric": "no hum hallucinated on spoken commands",
+      "threshold": ">= 0.90",
+      "measured": 1.0,
+      "status": "PASS",
+      "detail": "8/8 commands"
+    },
+    {
+      "name": "h.elive.mixed_containment",
+      "metric": "no ASR text on hummed spans (mixed)",
+      "threshold": ">= 0.98",
+      "measured": 1.0,
+      "status": "PASS",
+      "detail": "6/6 clips"
+    },
+    {
+      "name": "h.elive.mixed_hum_found",
+      "metric": "hum detected inside a mixed utterance",
+      "threshold": ">= 0.80 target",
+      "measured": 0.8333333333333334,
+      "status": "PASS",
+      "detail": "5/6 clips (legato segmentation WIP)"
+    }
+  ],
+  "summary": {
+    "s_pass": 14,
+    "s_fail": 0,
+    "pending": 0
+  },
+  "ablation": {
+    "acoustic": {
+      "clean": 0.7711149591149591,
+      "20db": 0.7824867724867723,
+      "10db": 0.789037037037037
+    },
+    "linguistic": {
+      "clean": 0.8656402116402117,
+      "20db": 0.8231746031746032,
+      "10db": 0.8564550264550265
+    },
+    "joint": {
+      "clean": 0.9368253968253968,
+      "20db": 0.8893968253968253,
+      "10db": 0.9011851851851852
+    }
+  }
+}

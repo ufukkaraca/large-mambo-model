@@ -1,0 +1,54 @@
+{
+  "phase": "R1",
+  "timestamp": "20260611T083258Z",
+  "commit": "b9048b382090c3b0d09a7dd370064d4e9860bb3a",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "r1.action_accuracy",
+      "metric": "action-plan accuracy vs golden",
+      "threshold": ">= 0.80",
+      "measured": 0.88,
+      "status": "PASS",
+      "detail": "n=50 models=['openai/gpt-oss-120b:free']"
+    },
+    {
+      "name": "r1.worked_example",
+      "metric": "\u00a72.3-style sketch -> insert_notes@tempo",
+      "threshold": "correct",
+      "measured": null,
+      "status": "PASS",
+      "detail": "like_but 'slower'"
+    },
+    {
+      "name": "r1.midi_render",
+      "metric": "golden plans render valid .mid",
+      "threshold": "runs",
+      "measured": null,
+      "status": "PASS",
+      "detail": "pretty_midi"
+    },
+    {
+      "name": "r1.per_template",
+      "metric": "per-template accuracy",
+      "threshold": "(info)",
+      "measured": 0.88,
+      "status": "INFO",
+      "detail": "can_bass=5/5 contrast=3/5 hum_first=5/5 like_but=9/9 pure_hum=6/6 speech_command=8/12 warmer=8/8"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green (ir + actions + units)",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    }
+  ],
+  "summary": {
+    "s_pass": 4,
+    "s_fail": 0,
+    "pending": 0
+  },
+  "ablation": {}
+}

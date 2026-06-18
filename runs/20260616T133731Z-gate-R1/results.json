@@ -1,0 +1,54 @@
+{
+  "phase": "R1",
+  "timestamp": "20260616T133731Z",
+  "commit": "8ef4cf8fef5e45e956f4028f382fb97e8c7c0798",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "r1.action_accuracy",
+      "metric": "action-plan accuracy vs golden",
+      "threshold": ">= 0.80",
+      "measured": 0.86,
+      "status": "PASS",
+      "detail": "n=50 models=['qwen2.5:7b']"
+    },
+    {
+      "name": "r1.worked_example",
+      "metric": "\u00a72.3-style sketch -> insert_notes@tempo",
+      "threshold": "correct",
+      "measured": null,
+      "status": "PASS",
+      "detail": "like_but 'slower'"
+    },
+    {
+      "name": "r1.midi_render",
+      "metric": "golden plans render valid .mid",
+      "threshold": "runs",
+      "measured": null,
+      "status": "PASS",
+      "detail": "pretty_midi"
+    },
+    {
+      "name": "r1.per_template",
+      "metric": "per-template accuracy",
+      "threshold": "(info)",
+      "measured": 0.86,
+      "status": "INFO",
+      "detail": "can_bass=3/5 contrast=5/5 hum_first=5/5 like_but=8/9 pure_hum=4/6 speech_command=11/12 warmer=7/8"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green (ir + actions + units)",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    }
+  ],
+  "summary": {
+    "s_pass": 4,
+    "s_fail": 0,
+    "pending": 0
+  },
+  "ablation": {}
+}

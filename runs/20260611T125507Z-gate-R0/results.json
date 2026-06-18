@@ -1,0 +1,110 @@
+{
+  "phase": "R0",
+  "timestamp": "20260611T125507Z",
+  "commit": "868dc737b51ffd52df937e90ee42339c9da2fc1e",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "melody.note_f1.clean",
+      "metric": "note onset+pitch F1 (50ms/50c)",
+      "threshold": ">= 0.80",
+      "measured": 0.9929180623298269,
+      "status": "PASS",
+      "detail": "n=70 melody spans"
+    },
+    {
+      "name": "melody.note_f1.10db",
+      "metric": "note F1 @ 10 dB SNR",
+      "threshold": ">= 0.80 target",
+      "measured": 0.9481487610379694,
+      "status": "PASS",
+      "detail": "robustness reference"
+    },
+    {
+      "name": "melody.key_top2",
+      "metric": "key top-2 acc (>=5-note spans)",
+      "threshold": ">= 0.85",
+      "measured": 0.9714285714285714,
+      "status": "PASS",
+      "detail": "n=70"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green (ir + units)",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    },
+    {
+      "name": "router.segment_f1.clean",
+      "metric": "joint segment F1 (clean)",
+      "threshold": ">= 0.90",
+      "measured": 0.935936507936508,
+      "status": "PASS",
+      "detail": "acoustic=0.771 linguistic=0.865"
+    },
+    {
+      "name": "router.segment_f1.10db",
+      "metric": "joint segment F1 (10 dB)",
+      "threshold": ">= 0.85",
+      "measured": 0.8452804232804234,
+      "status": "FAIL",
+      "detail": "noise robustness"
+    },
+    {
+      "name": "router.boundary",
+      "metric": "boundary error median",
+      "threshold": "<= 250 ms",
+      "measured": 71.79999999999964,
+      "status": "PASS",
+      "detail": "72 ms"
+    },
+    {
+      "name": "router.hallucination",
+      "metric": "text on melody spans",
+      "threshold": "<= 2%",
+      "measured": 0.0,
+      "status": "PASS",
+      "detail": "0.0%"
+    },
+    {
+      "name": "router.ablation",
+      "metric": "joint >= max(acoustic, linguistic)",
+      "threshold": "joint wins",
+      "measured": 0.935936507936508,
+      "status": "PASS",
+      "detail": "joint 0.936 vs ac 0.771 / ling 0.865"
+    },
+    {
+      "name": "e2e.make_uir",
+      "metric": "file -> UIR pipeline validates",
+      "threshold": "runs",
+      "measured": null,
+      "status": "PASS",
+      "detail": "fuse.file_to_uir"
+    }
+  ],
+  "summary": {
+    "s_pass": 9,
+    "s_fail": 1,
+    "pending": 0
+  },
+  "ablation": {
+    "acoustic": {
+      "clean": 0.7711149591149591,
+      "20db": 0.7824867724867723,
+      "10db": 0.789037037037037
+    },
+    "linguistic": {
+      "clean": 0.8652275132275133,
+      "20db": 0.8173333333333332,
+      "10db": 0.8215026455026454
+    },
+    "joint": {
+      "clean": 0.935936507936508,
+      "20db": 0.8713333333333333,
+      "10db": 0.8452804232804234
+    }
+  }
+}

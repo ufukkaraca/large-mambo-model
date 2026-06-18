@@ -1,0 +1,74 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_019_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 4.9182,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 4.8582,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 0.0,
+          "dur": 1.0718,
+          "vel": 102
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 1.165,
+          "dur": 1.0718,
+          "vel": 87
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 2.3301,
+          "dur": 0.5359,
+          "vel": 83
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 2.9126,
+          "dur": 0.8039,
+          "vel": 81
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 3.7864,
+          "dur": 1.0718,
+          "vel": 93
+        }
+      ],
+      "analysis": {
+        "n_notes": 5,
+        "key_candidates": [
+          {
+            "key": "B minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 103.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 246.94
+      }
+    }
+  ]
+}

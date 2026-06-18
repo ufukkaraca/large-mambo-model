@@ -1,0 +1,85 @@
+{
+  "phase": "R0",
+  "timestamp": "20260610T215108Z",
+  "commit": "c5c3f59236865ae7e3cdfd10e345ee820e18682e",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "melody.note_f1.clean",
+      "metric": "note onset+pitch F1 (50ms/50c)",
+      "threshold": ">= 0.80",
+      "measured": 0.9929180623298269,
+      "status": "PASS",
+      "detail": "n=70 melody spans"
+    },
+    {
+      "name": "melody.note_f1.10db",
+      "metric": "note F1 @ 10 dB SNR",
+      "threshold": ">= 0.80 target",
+      "measured": 0.9481487610379694,
+      "status": "PASS",
+      "detail": "robustness reference"
+    },
+    {
+      "name": "melody.key_top2",
+      "metric": "key top-2 acc (>=5-note spans)",
+      "threshold": ">= 0.85",
+      "measured": 0.9714285714285714,
+      "status": "PASS",
+      "detail": "n=70"
+    },
+    {
+      "name": "contract.pytest",
+      "metric": "pytest green (ir + units)",
+      "threshold": "all pass",
+      "measured": null,
+      "status": "PASS",
+      "detail": "lab/tests"
+    },
+    {
+      "name": "router.segment_f1",
+      "metric": "segment F1 (clean / 10 dB)",
+      "threshold": ">= 0.90 / 0.85",
+      "measured": null,
+      "status": "PENDING",
+      "detail": "router not built yet"
+    },
+    {
+      "name": "router.boundary",
+      "metric": "boundary error median",
+      "threshold": "<= 250 ms",
+      "measured": null,
+      "status": "PENDING",
+      "detail": "router not built yet"
+    },
+    {
+      "name": "router.hallucination",
+      "metric": "text on melody spans",
+      "threshold": "<= 2%",
+      "measured": null,
+      "status": "PENDING",
+      "detail": "router not built yet"
+    },
+    {
+      "name": "router.ablation",
+      "metric": "joint >= max(acoustic, linguistic)",
+      "threshold": "table exists",
+      "measured": null,
+      "status": "PENDING",
+      "detail": "router not built yet"
+    },
+    {
+      "name": "e2e.make_uir",
+      "metric": "make uir FILE=x.wav works",
+      "threshold": "runs",
+      "measured": null,
+      "status": "PENDING",
+      "detail": "router not built yet"
+    }
+  ],
+  "summary": {
+    "s_pass": 4,
+    "s_fail": 0,
+    "pending": 5
+  }
+}

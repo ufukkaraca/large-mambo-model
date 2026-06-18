@@ -1,0 +1,146 @@
+[
+  {
+    "uid": "syn_pure_hum_014_clean",
+    "text": "NOTES: F3, F4.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_015_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_016_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_017_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_018_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_019_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_020_clean",
+    "text": "NOTES: F4, F4, F4.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_021_clean",
+    "text": "NOTES: C5, E5, G5.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_022_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_023_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_024_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  },
+  {
+    "uid": "syn_pure_hum_025_clean",
+    "text": "NOTES: C3, E3, G3.",
+    "audio_ingested": true,
+    "audio_kw": "audio",
+    "input_keys": [
+      "input_ids",
+      "attention_mask",
+      "input_features",
+      "feature_attention_mask"
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_speech_command_010_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 1.0354,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.0354,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "loop the chorus"
+    }
+  ]
+}

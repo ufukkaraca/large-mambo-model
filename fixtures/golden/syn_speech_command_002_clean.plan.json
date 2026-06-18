@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_002_clean",
+  "intent_summary": "mute a track",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "mute_track",
+      "args": {
+        "index": 2
+      }
+    }
+  ]
+}

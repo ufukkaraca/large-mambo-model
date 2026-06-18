@@ -1,0 +1,20 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_005_clean",
+  "intent_summary": "return to start and play",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "transport",
+      "args": {
+        "action": "to_start"
+      }
+    },
+    {
+      "op": "transport",
+      "args": {
+        "action": "play"
+      }
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_warmer_065_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 9.8098,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.8608,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.0173,
+      "t1": 8.5865,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 1.0173,
+          "dur": 1.4154,
+          "vel": 100
+        },
+        {
+          "midi": 52,
+          "name": "E3",
+          "t0": 2.5558,
+          "dur": 0.7077,
+          "vel": 85
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 3.325,
+          "dur": 0.7077,
+          "vel": 100
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 4.0942,
+          "dur": 0.3538,
+          "vel": 97
+        },
+        {
+          "midi": 52,
+          "name": "E3",
+          "t0": 4.4788,
+          "dur": 1.4154,
+          "vel": 100
+        },
+        {
+          "midi": 48,
+          "name": "C3",
+          "t0": 6.0173,
+          "dur": 1.0615,
+          "vel": 84
+        },
+        {
+          "midi": 43,
+          "name": "G2",
+          "t0": 7.1711,
+          "dur": 1.4154,
+          "vel": 85
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "G major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 78.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d d d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 164.81
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 8.7314,
+      "t1": 9.8098,
+      "confidence": 1.0,
+      "text": "on something warmer"
+    }
+  ]
+}

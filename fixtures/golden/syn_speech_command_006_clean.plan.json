@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_006_clean",
+  "intent_summary": "create a track",
+  "needs_confirmation": true,
+  "actions": [
+    {
+      "op": "create_track",
+      "args": {
+        "kind": "software_instrument"
+      }
+    }
+  ]
+}

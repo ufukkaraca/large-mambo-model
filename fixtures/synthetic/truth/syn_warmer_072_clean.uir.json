@@ -1,0 +1,110 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_warmer_072_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 11.3244,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.8323,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.1308,
+      "t1": 10.0834,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 1.1308,
+          "dur": 1.4526,
+          "vel": 86
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 2.7097,
+          "dur": 0.7263,
+          "vel": 85
+        },
+        {
+          "midi": 68,
+          "name": "G#4",
+          "t0": 3.4992,
+          "dur": 1.0895,
+          "vel": 92
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 4.6834,
+          "dur": 0.3632,
+          "vel": 99
+        },
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 5.0782,
+          "dur": 1.4526,
+          "vel": 101
+        },
+        {
+          "midi": 68,
+          "name": "G#4",
+          "t0": 6.6571,
+          "dur": 1.0895,
+          "vel": 98
+        },
+        {
+          "midi": 70,
+          "name": "A#4",
+          "t0": 7.8413,
+          "dur": 0.7263,
+          "vel": 92
+        },
+        {
+          "midi": 73,
+          "name": "C#5",
+          "t0": 8.6308,
+          "dur": 1.4526,
+          "vel": 100
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "C# major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 76.0,
+          "confidence": 1.0
+        },
+        "contour": "u u d u u u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 392.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 10.279,
+      "t1": 11.3244,
+      "confidence": 1.0,
+      "text": "on something warmer"
+    }
+  ]
+}

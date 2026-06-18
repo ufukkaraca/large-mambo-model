@@ -1,0 +1,132 @@
+{
+  "model": "Qwen/Qwen2-Audio-7B-Instruct (base, no LoRA)",
+  "route": "base Qwen2-Audio via R3 Modal app (confirmed-audio)",
+  "n_clips": 12,
+  "per_clip": [
+    {
+      "uid": "syn_pure_hum_014_clean",
+      "gt_n": 8,
+      "omni_n": 2,
+      "omni_pitch_acc": 0.125,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 59.0,
+      "gt_median": 56.0,
+      "omni_raw": "NOTES: F3, F4."
+    },
+    {
+      "uid": "syn_pure_hum_015_clean",
+      "gt_n": 8,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.25,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 60.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_016_clean",
+      "gt_n": 6,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.167,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 62.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_017_clean",
+      "gt_n": 8,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.125,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 62.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_018_clean",
+      "gt_n": 8,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.125,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 60.5,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_019_clean",
+      "gt_n": 5,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.2,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 59.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_020_clean",
+      "gt_n": 7,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.429,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 65.0,
+      "gt_median": 65.0,
+      "omni_raw": "NOTES: F4, F4, F4."
+    },
+    {
+      "uid": "syn_pure_hum_021_clean",
+      "gt_n": 7,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.143,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 76.0,
+      "gt_median": 62.0,
+      "omni_raw": "NOTES: C5, E5, G5."
+    },
+    {
+      "uid": "syn_pure_hum_022_clean",
+      "gt_n": 5,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.2,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 55.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_023_clean",
+      "gt_n": 6,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.167,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 53.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_024_clean",
+      "gt_n": 5,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.2,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 60.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    },
+    {
+      "uid": "syn_pure_hum_025_clean",
+      "gt_n": 5,
+      "omni_n": 3,
+      "omni_pitch_acc": 0.2,
+      "mambo_pitch_acc": 1.0,
+      "omni_median": 52.0,
+      "gt_median": 61.0,
+      "omni_raw": "NOTES: C3, E3, G3."
+    }
+  ],
+  "mambo_pitch_acc_mean": 1.0,
+  "omni_pitch_acc_mean": 0.194,
+  "pitch_corr_r": 0.36,
+  "pitch_corr_n": 12,
+  "audio_ingestion": "confirmed by construction (local GPU inference on a true audio LLM)"
+}

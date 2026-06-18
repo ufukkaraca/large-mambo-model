@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_039_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 9.3293,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1674,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3067,
+      "t1": 8.3117,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 1.3067,
+          "dur": 1.38,
+          "vel": 80
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 2.8067,
+          "dur": 1.035,
+          "vel": 93
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 3.9317,
+          "dur": 0.345,
+          "vel": 93
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 4.3067,
+          "dur": 0.345,
+          "vel": 96
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 4.6817,
+          "dur": 1.38,
+          "vel": 84
+        },
+        {
+          "midi": 67,
+          "name": "G4",
+          "t0": 6.1817,
+          "dur": 0.69,
+          "vel": 78
+        },
+        {
+          "midi": 69,
+          "name": "A4",
+          "t0": 6.9317,
+          "dur": 1.38,
+          "vel": 79
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "A minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 80.0,
+          "confidence": 1.0
+        },
+        "contour": "u u u u u u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 329.63
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 8.5673,
+      "t1": 9.3293,
+      "confidence": 1.0,
+      "text": "but softer"
+    }
+  ]
+}

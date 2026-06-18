@@ -1,0 +1,34 @@
+MIT License
+
+Copyright (c) 2026 Ufuk Karaca
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Note on components and data (for downstream users):
+- The Mambo code in this repository is MIT-licensed (above).
+- It depends on permissively-licensed libraries (librosa, faster-whisper, numpy,
+  pretty_midi, etc.); see each project for its terms.
+- The OPTIONAL training track (finetune/) references third-party datasets/weights
+  with their own, more restrictive terms (e.g. HumTrans CC BY-NC, Qwen2-Audio,
+  MusicGen weights CC-BY-NC). Those are NOT part of the shipped modular pipeline
+  and are not redistributed here; honor their licenses if you use that track.
+- Human voice recordings of study volunteers are NOT included (git-ignored); only
+  their derived metrics are committed. See the ethics statement in PAPER.md §7.1.

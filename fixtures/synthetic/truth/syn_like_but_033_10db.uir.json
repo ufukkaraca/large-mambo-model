@@ -1,0 +1,110 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_033_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 9.7812,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1674,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3265,
+      "t1": 8.7222,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 1.3265,
+          "dur": 1.2,
+          "vel": 84
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 2.6308,
+          "dur": 0.3,
+          "vel": 84
+        },
+        {
+          "midi": 51,
+          "name": "D#3",
+          "t0": 2.9569,
+          "dur": 0.6,
+          "vel": 102
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 3.6091,
+          "dur": 0.6,
+          "vel": 84
+        },
+        {
+          "midi": 51,
+          "name": "D#3",
+          "t0": 4.2613,
+          "dur": 1.2,
+          "vel": 83
+        },
+        {
+          "midi": 49,
+          "name": "C#3",
+          "t0": 5.5656,
+          "dur": 1.2,
+          "vel": 92
+        },
+        {
+          "midi": 46,
+          "name": "A#2",
+          "t0": 6.87,
+          "dur": 0.6,
+          "vel": 80
+        },
+        {
+          "midi": 46,
+          "name": "A#2",
+          "t0": 7.5222,
+          "dur": 1.2,
+          "vel": 91
+        }
+      ],
+      "analysis": {
+        "n_notes": 8,
+        "key_candidates": [
+          {
+            "key": "A# minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 92.0,
+          "confidence": 1.0
+        },
+        "contour": "d d u d d d ="
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 155.56
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 9.0101,
+      "t1": 9.7813,
+      "confidence": 1.0,
+      "text": "but a bit higher"
+    }
+  ]
+}

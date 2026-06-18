@@ -1,0 +1,17 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_001_clean",
+  "intent_summary": "raise a fader",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "change_track_volume",
+      "args": {
+        "delta_db": 2.0,
+        "track": {
+          "index": 1
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "n_mixed": 6,
+  "n_speech": 8,
+  "containment": {
+    "naive_halluc_clips": 3,
+    "mambo_halluc_clips": 0
+  },
+  "hum_detected_by_arm": {
+    "acoustic": 5,
+    "linguistic": 2,
+    "joint": 5
+  },
+  "speech_no_hum_by_arm": {
+    "acoustic": 2,
+    "linguistic": 8,
+    "joint": 8
+  },
+  "per_clip": [
+    {
+      "wav": "mixed_bass_do_01.wav",
+      "naive_words_on_hum": [],
+      "mambo_text_on_hum": []
+    },
+    {
+      "wav": "mixed_contrast_01.wav",
+      "naive_words_on_hum": [
+        "da",
+        "ba",
+        "da",
+        "instead",
+        "ba",
+        "ba",
+        "ba",
+        "ba"
+      ],
+      "mambo_text_on_hum": []
+    },
+    {
+      "wav": "mixed_go_instead_01.wav",
+      "naive_words_on_hum": [
+        "go..."
+      ],
+      "mambo_text_on_hum": []
+    },
+    {
+      "wav": "mixed_humfirst_01.wav",
+      "naive_words_on_hum": [],
+      "mambo_text_on_hum": []
+    },
+    {
+      "wav": "mixed_like_slower_01.wav",
+      "naive_words_on_hum": [],
+      "mambo_text_on_hum": []
+    },
+    {
+      "wav": "mixed_play_and_01.wav",
+      "naive_words_on_hum": [
+        "kick"
+      ],
+      "mambo_text_on_hum": []
+    }
+  ]
+}

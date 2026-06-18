@@ -1,0 +1,378 @@
+{
+  "phase": "R0-voiceprint-calibration",
+  "timestamp": "20260617T110639Z",
+  "commit": "89504d0628eab6f60d8c30aac8c4457926fb9147",
+  "dirty": false,
+  "metric": "note-count within \u00b11 of self-reported intended_notes; voiceprint from own held+speech clips",
+  "speakers": [
+    {
+      "speaker": "eddy",
+      "vibrato_semitones": 0.679,
+      "pitch_step": 1.0,
+      "deadband_untouched": true,
+      "note_count_baseline": {
+        "ok": 13,
+        "n": 16,
+        "acc": 0.812,
+        "ci95": [
+          0.57,
+          0.934
+        ]
+      },
+      "note_count_calibrated": {
+        "ok": 13,
+        "n": 16,
+        "acc": 0.812,
+        "ci95": [
+          0.57,
+          0.934
+        ]
+      },
+      "delta": 0.0,
+      "note_detail": [
+        {
+          "wav": "hold_steady_01.wav",
+          "gt": 1,
+          "baseline_n": 1,
+          "calibrated_n": 1
+        },
+        {
+          "wav": "hold_vibrato_01.wav",
+          "gt": 1,
+          "baseline_n": 2,
+          "calibrated_n": 2
+        },
+        {
+          "wav": "repeat3_01.wav",
+          "gt": 3,
+          "baseline_n": 4,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "repeat4_01.wav",
+          "gt": 4,
+          "baseline_n": 1,
+          "calibrated_n": 1
+        },
+        {
+          "wav": "repeat_fast6_01.wav",
+          "gt": 6,
+          "baseline_n": 4,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "scale_up4_01.wav",
+          "gt": 4,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "scale_down4_01.wav",
+          "gt": 4,
+          "baseline_n": 3,
+          "calibrated_n": 3
+        },
+        {
+          "wav": "legato_slow4_01.wav",
+          "gt": 4,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "legato_slow5_01.wav",
+          "gt": 5,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "legato_tune_01.wav",
+          "gt": 6,
+          "baseline_n": 7,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "legato_updown5_01.wav",
+          "gt": 5,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "edges_silence_01.wav",
+          "gt": 5,
+          "baseline_n": 6,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "edges_abrupt_01.wav",
+          "gt": 5,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "low_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "high_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 8,
+          "calibrated_n": 8
+        },
+        {
+          "wav": "doo_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 3,
+          "calibrated_n": 3
+        }
+      ]
+    },
+    {
+      "speaker": "omer",
+      "vibrato_semitones": 0.601,
+      "pitch_step": 1.0,
+      "deadband_untouched": true,
+      "note_count_baseline": {
+        "ok": 6,
+        "n": 16,
+        "acc": 0.375,
+        "ci95": [
+          0.185,
+          0.614
+        ]
+      },
+      "note_count_calibrated": {
+        "ok": 6,
+        "n": 16,
+        "acc": 0.375,
+        "ci95": [
+          0.185,
+          0.614
+        ]
+      },
+      "delta": 0.0,
+      "note_detail": [
+        {
+          "wav": "hold_steady_01.wav",
+          "gt": 1,
+          "baseline_n": 2,
+          "calibrated_n": 2
+        },
+        {
+          "wav": "hold_vibrato_01.wav",
+          "gt": 1,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "repeat3_01.wav",
+          "gt": 3,
+          "baseline_n": 9,
+          "calibrated_n": 9
+        },
+        {
+          "wav": "repeat4_01.wav",
+          "gt": 4,
+          "baseline_n": 14,
+          "calibrated_n": 14
+        },
+        {
+          "wav": "repeat_fast6_01.wav",
+          "gt": 6,
+          "baseline_n": 6,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "scale_up4_01.wav",
+          "gt": 4,
+          "baseline_n": 5,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "scale_down4_01.wav",
+          "gt": 4,
+          "baseline_n": 8,
+          "calibrated_n": 8
+        },
+        {
+          "wav": "legato_slow4_01.wav",
+          "gt": 4,
+          "baseline_n": 19,
+          "calibrated_n": 19
+        },
+        {
+          "wav": "legato_slow5_01.wav",
+          "gt": 5,
+          "baseline_n": 18,
+          "calibrated_n": 18
+        },
+        {
+          "wav": "legato_tune_01.wav",
+          "gt": 6,
+          "baseline_n": 21,
+          "calibrated_n": 21
+        },
+        {
+          "wav": "legato_updown5_01.wav",
+          "gt": 5,
+          "baseline_n": 6,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "edges_silence_01.wav",
+          "gt": 5,
+          "baseline_n": 7,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "edges_abrupt_01.wav",
+          "gt": 5,
+          "baseline_n": 7,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "low_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 4,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "high_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 7,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "doo_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 4,
+          "calibrated_n": 4
+        }
+      ]
+    },
+    {
+      "speaker": "rim",
+      "vibrato_semitones": 3.239,
+      "pitch_step": 2.5,
+      "deadband_untouched": false,
+      "note_count_baseline": {
+        "ok": 2,
+        "n": 16,
+        "acc": 0.125,
+        "ci95": [
+          0.035,
+          0.36
+        ]
+      },
+      "note_count_calibrated": {
+        "ok": 5,
+        "n": 16,
+        "acc": 0.312,
+        "ci95": [
+          0.142,
+          0.556
+        ]
+      },
+      "delta": 0.187,
+      "note_detail": [
+        {
+          "wav": "hold_steady_01.wav",
+          "gt": 1,
+          "baseline_n": 2,
+          "calibrated_n": 2
+        },
+        {
+          "wav": "hold_vibrato_01.wav",
+          "gt": 1,
+          "baseline_n": 4,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "repeat3_01.wav",
+          "gt": 3,
+          "baseline_n": 9,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "repeat4_01.wav",
+          "gt": 4,
+          "baseline_n": 9,
+          "calibrated_n": 9
+        },
+        {
+          "wav": "repeat_fast6_01.wav",
+          "gt": 6,
+          "baseline_n": 9,
+          "calibrated_n": 9
+        },
+        {
+          "wav": "scale_up4_01.wav",
+          "gt": 4,
+          "baseline_n": 8,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "scale_down4_01.wav",
+          "gt": 4,
+          "baseline_n": 7,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "legato_slow4_01.wav",
+          "gt": 4,
+          "baseline_n": 8,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "legato_slow5_01.wav",
+          "gt": 5,
+          "baseline_n": 8,
+          "calibrated_n": 5
+        },
+        {
+          "wav": "legato_tune_01.wav",
+          "gt": 6,
+          "baseline_n": 9,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "legato_updown5_01.wav",
+          "gt": 5,
+          "baseline_n": 12,
+          "calibrated_n": 7
+        },
+        {
+          "wav": "edges_silence_01.wav",
+          "gt": 5,
+          "baseline_n": 10,
+          "calibrated_n": 9
+        },
+        {
+          "wav": "edges_abrupt_01.wav",
+          "gt": 5,
+          "baseline_n": 5,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "low_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 9,
+          "calibrated_n": 4
+        },
+        {
+          "wav": "high_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 6,
+          "calibrated_n": 6
+        },
+        {
+          "wav": "doo_melody_01.wav",
+          "gt": 4,
+          "baseline_n": 8,
+          "calibrated_n": 8
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_warmer_066_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 7.6849,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.8608,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 0.995,
+      "t1": 6.2624,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 66,
+          "name": "F#4",
+          "t0": 0.995,
+          "dur": 1.1621,
+          "vel": 91
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 2.2582,
+          "dur": 0.5811,
+          "vel": 91
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 2.8897,
+          "dur": 0.5811,
+          "vel": 85
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 3.5213,
+          "dur": 0.2905,
+          "vel": 98
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 3.8371,
+          "dur": 1.1621,
+          "vel": 79
+        },
+        {
+          "midi": 54,
+          "name": "F#3",
+          "t0": 5.1003,
+          "dur": 1.1621,
+          "vel": 88
+        }
+      ],
+      "analysis": {
+        "n_notes": 6,
+        "key_candidates": [
+          {
+            "key": "F# minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 95.0,
+          "confidence": 1.0
+        },
+        "contour": "d d u d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 261.63
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 6.6065,
+      "t1": 7.6849,
+      "confidence": 1.0,
+      "text": "on something warmer"
+    }
+  ]
+}

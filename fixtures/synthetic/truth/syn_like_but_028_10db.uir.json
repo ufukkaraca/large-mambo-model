@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_028_10db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 9.0589,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1382,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.3513,
+      "t1": 8.117,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 1.3513,
+          "dur": 1.0514,
+          "vel": 78
+        },
+        {
+          "midi": 61,
+          "name": "C#4",
+          "t0": 2.4942,
+          "dur": 0.5257,
+          "vel": 89
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 3.0656,
+          "dur": 1.0514,
+          "vel": 92
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 4.2084,
+          "dur": 1.0514,
+          "vel": 96
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 5.3513,
+          "dur": 0.7886,
+          "vel": 80
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 6.2084,
+          "dur": 0.7886,
+          "vel": 89
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 7.0656,
+          "dur": 1.0514,
+          "vel": 82
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "B major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 105.0,
+          "confidence": 1.0
+        },
+        "contour": "u d d u d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 246.94
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 8.2878,
+      "t1": 9.0589,
+      "confidence": 1.0,
+      "text": "but a bit higher"
+    }
+  ]
+}

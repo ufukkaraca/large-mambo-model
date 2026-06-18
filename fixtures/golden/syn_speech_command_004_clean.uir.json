@@ -1,0 +1,67 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_speech_command_004_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 2.0684,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 2.0684,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "start recording on the selected track"
+    }
+  ],
+  "session_context": {
+    "daw": "garageband",
+    "selected_track": {
+      "index": 2,
+      "name": "Keys",
+      "kind": "software_instrument"
+    },
+    "tracks": [
+      {
+        "index": 0,
+        "name": "Drums",
+        "kind": "drummer"
+      },
+      {
+        "index": 1,
+        "name": "Bass",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 2,
+        "name": "Keys",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 3,
+        "name": "Lead",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 4,
+        "name": "Vocal",
+        "kind": "audio"
+      },
+      {
+        "index": 5,
+        "name": "Guitar",
+        "kind": "audio"
+      },
+      {
+        "index": 6,
+        "name": "Hats",
+        "kind": "drummer"
+      }
+    ],
+    "project_tempo_bpm": 120,
+    "project_key": "C major",
+    "transport": "stopped"
+  }
+}

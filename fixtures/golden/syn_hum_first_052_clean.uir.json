@@ -1,0 +1,143 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_hum_first_052_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 7.1044,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 5.5119,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 0.0,
+          "dur": 0.9356,
+          "vel": 94
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 1.0169,
+          "dur": 0.2339,
+          "vel": 102
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 1.2712,
+          "dur": 0.4678,
+          "vel": 96
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 1.7797,
+          "dur": 0.9356,
+          "vel": 100
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 2.7966,
+          "dur": 0.9356,
+          "vel": 85
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 3.8136,
+          "dur": 0.7017,
+          "vel": 100
+        },
+        {
+          "midi": 63,
+          "name": "D#4",
+          "t0": 4.5763,
+          "dur": 0.9356,
+          "vel": 96
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "D# major",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 118.0,
+          "confidence": 1.0
+        },
+        "contour": "u d d u u d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 311.13
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 5.6991,
+      "t1": 7.1044,
+      "confidence": 1.0,
+      "text": "that, but on strings"
+    }
+  ],
+  "session_context": {
+    "daw": "garageband",
+    "selected_track": {
+      "index": 2,
+      "name": "Keys",
+      "kind": "software_instrument"
+    },
+    "tracks": [
+      {
+        "index": 0,
+        "name": "Drums",
+        "kind": "drummer"
+      },
+      {
+        "index": 1,
+        "name": "Bass",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 2,
+        "name": "Keys",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 3,
+        "name": "Lead",
+        "kind": "software_instrument"
+      },
+      {
+        "index": 4,
+        "name": "Vocal",
+        "kind": "audio"
+      },
+      {
+        "index": 5,
+        "name": "Guitar",
+        "kind": "audio"
+      },
+      {
+        "index": 6,
+        "name": "Hats",
+        "kind": "drummer"
+      }
+    ],
+    "project_tempo_bpm": 120,
+    "project_key": "C major",
+    "transport": "stopped"
+  }
+}

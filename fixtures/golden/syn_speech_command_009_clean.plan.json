@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_009_clean",
+  "intent_summary": "pan is unsupported; ask",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "ask_user",
+      "args": {
+        "question": "Panning isn't supported yet — adjust it manually?"
+      }
+    }
+  ]
+}

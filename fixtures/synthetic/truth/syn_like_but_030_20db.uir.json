@@ -1,0 +1,103 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_like_but_030_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 6.9379,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 1.1674,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "give me something like"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.4278,
+      "t1": 6.0212,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 1.4278,
+          "dur": 0.9049,
+          "vel": 79
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 2.4114,
+          "dur": 0.4525,
+          "vel": 101
+        },
+        {
+          "midi": 53,
+          "name": "F3",
+          "t0": 2.9032,
+          "dur": 0.6787,
+          "vel": 92
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 3.6409,
+          "dur": 0.4525,
+          "vel": 97
+        },
+        {
+          "midi": 53,
+          "name": "F3",
+          "t0": 4.1327,
+          "dur": 0.2262,
+          "vel": 99
+        },
+        {
+          "midi": 50,
+          "name": "D3",
+          "t0": 4.3786,
+          "dur": 0.6787,
+          "vel": 84
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 5.1163,
+          "dur": 0.9049,
+          "vel": 84
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "G minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 122.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u d d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 196.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 6.3235,
+      "t1": 6.9379,
+      "confidence": 1.0,
+      "text": "and warmer"
+    }
+  ]
+}

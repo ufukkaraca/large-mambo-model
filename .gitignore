@@ -1,0 +1,70 @@
+# ── Python ─────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# ── uv / virtualenvs ───────────────────────────────────────────────────
+.venv/
+lab/.venv/
+venv/
+
+# ── Generated audio fixtures (regenerable bit-exact from datagen/ + seed) ─
+# Ground-truth JSON + manifest ARE committed; the WAVs are not.
+fixtures/synthetic/audio/
+fixtures/**/*.wav
+fixtures/**/*.flac
+# Human voice recordings are NOT committed (privacy/consent — including the author's
+# own E-LIVE clips); only their derived metrics + manifests (intended note counts,
+# transcripts) are. See PAPER.md §7.1.
+
+# ── Downloaded datasets / model weights (pinned by hash, not vendored) ──
+datagen/cache/
+datagen/downloads/
+models/
+*.onnx
+*.pt
+*.ckpt
+*.safetensors
+
+# ── Heavy run artifacts (results.json + config are kept; raw audio is not) ─
+runs/**/*.wav
+# Global safety net: human audio is never committed (privacy/consent + size)
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.aiff
+runs/**/*.mid
+
+# ── Runtime output / JSONL bank-labels log (regenerable; future training data) ─
+out/
+lab/out/
+
+# ── OS / editor ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+
+# ── Built paper PDF (regenerable via `make pdf`; arXiv wants source) ──────
+mambo.pdf
+*.pdf
+
+# ── Secrets ────────────────────────────────────────────────────────────
+.env
+*.key
+CREDENTIALS.local
+
+# ── R3 training artifacts (regenerable / large) ──────────────────────────
+fixtures/mambomix/
+finetune/data/
+finetune/eval_preds.json
+finetune/adapter/
+
+# third-party (friends) voice data — raw audio stays local (privacy); eval results are committed
+fixtures/human/voices/
+
+# Multi-seed robustness corpora (regenerable from datagen + seed)
+fixtures/_multiseed/

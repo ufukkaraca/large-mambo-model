@@ -1,0 +1,133 @@
+{
+  "n": 21,
+  "mambo_acc": 0.8571428571428571,
+  "basicpitch_acc": 0.3333333333333333,
+  "rows": [
+    {
+      "wav": "dadada_01.wav",
+      "intended": 4,
+      "mambo": 4,
+      "basicpitch": 7
+    },
+    {
+      "wav": "dadada_scale_01.wav",
+      "intended": 4,
+      "mambo": 4,
+      "basicpitch": 6
+    },
+    {
+      "wav": "doo_melody_01.wav",
+      "intended": 5,
+      "mambo": 7,
+      "basicpitch": 11
+    },
+    {
+      "wav": "edges_abrupt_01.wav",
+      "intended": 5,
+      "mambo": 4,
+      "basicpitch": 5
+    },
+    {
+      "wav": "edges_silence_01.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 5
+    },
+    {
+      "wav": "high_melody_01.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 7
+    },
+    {
+      "wav": "hold_01.wav",
+      "intended": 1,
+      "mambo": 1,
+      "basicpitch": 2
+    },
+    {
+      "wav": "hold_steady_01.wav",
+      "intended": 1,
+      "mambo": 2,
+      "basicpitch": 2
+    },
+    {
+      "wav": "hold_vibrato_01.wav",
+      "intended": 1,
+      "mambo": 2,
+      "basicpitch": 9
+    },
+    {
+      "wav": "legato_slow4_01.wav",
+      "intended": 4,
+      "mambo": 6,
+      "basicpitch": 10
+    },
+    {
+      "wav": "legato_slow5_01.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 14
+    },
+    {
+      "wav": "legato_tune_01.wav",
+      "intended": 6,
+      "mambo": 6,
+      "basicpitch": 10
+    },
+    {
+      "wav": "legato_updown5_01.wav",
+      "intended": 5,
+      "mambo": 6,
+      "basicpitch": 10
+    },
+    {
+      "wav": "low_melody_01.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 12
+    },
+    {
+      "wav": "phrase_edges_01.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 7
+    },
+    {
+      "wav": "phrase_edges_02.wav",
+      "intended": 5,
+      "mambo": 5,
+      "basicpitch": 6
+    },
+    {
+      "wav": "repeat3_01.wav",
+      "intended": 3,
+      "mambo": 3,
+      "basicpitch": 3
+    },
+    {
+      "wav": "repeat4_01.wav",
+      "intended": 4,
+      "mambo": 4,
+      "basicpitch": 6
+    },
+    {
+      "wav": "repeat_fast6_01.wav",
+      "intended": 6,
+      "mambo": 8,
+      "basicpitch": 8
+    },
+    {
+      "wav": "scale_down4_01.wav",
+      "intended": 4,
+      "mambo": 5,
+      "basicpitch": 5
+    },
+    {
+      "wav": "scale_up4_01.wav",
+      "intended": 4,
+      "mambo": 5,
+      "basicpitch": 7
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_contrast_062_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 13.6602,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 0.8252,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "make it go"
+    },
+    {
+      "kind": "melody",
+      "t0": 1.0494,
+      "t1": 7.3044,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 1.0494,
+          "dur": 1.38,
+          "vel": 91
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 2.5494,
+          "dur": 0.69,
+          "vel": 83
+        },
+        {
+          "midi": 55,
+          "name": "G3",
+          "t0": 3.2994,
+          "dur": 1.38,
+          "vel": 81
+        },
+        {
+          "midi": 59,
+          "name": "B3",
+          "t0": 4.7994,
+          "dur": 1.035,
+          "vel": 92
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 5.9244,
+          "dur": 1.38,
+          "vel": 93
+        }
+      ],
+      "analysis": {
+        "n_notes": 5,
+        "key_candidates": [
+          {
+            "key": "A minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 80.0,
+          "confidence": 1.0
+        },
+        "contour": "u d u d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 220.0
+      }
+    },
+    {
+      "kind": "speech",
+      "t0": 7.6143,
+      "t1": 8.3539,
+      "confidence": 1.0,
+      "text": "instead of"
+    },
+    {
+      "kind": "melody",
+      "t0": 8.5106,
+      "t1": 13.6002,
+      "confidence": 1.0,
+      "role": "contrast",
+      "notes": [
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 8.5106,
+          "dur": 0.9517,
+          "vel": 99
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 9.5451,
+          "dur": 0.7138,
+          "vel": 82
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 10.3209,
+          "dur": 0.2379,
+          "vel": 101
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 10.5796,
+          "dur": 0.7138,
+          "vel": 78
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 11.3554,
+          "dur": 0.9517,
+          "vel": 82
+        },
+        {
+          "midi": 57,
+          "name": "A3",
+          "t0": 12.3899,
+          "dur": 0.2379,
+          "vel": 88
+        },
+        {
+          "midi": 52,
+          "name": "E3",
+          "t0": 12.6485,
+          "dur": 0.9517,
+          "vel": 79
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "E minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 116.0,
+          "confidence": 1.0
+        },
+        "contour": "d u d d d d"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 293.66
+      }
+    }
+  ]
+}

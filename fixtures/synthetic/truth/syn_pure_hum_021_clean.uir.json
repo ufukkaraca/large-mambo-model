@@ -1,0 +1,88 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_pure_hum_021_clean",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 8.798,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "melody",
+      "t0": 0.0,
+      "t1": 8.738,
+      "confidence": 1.0,
+      "role": "exemplar",
+      "notes": [
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 0.0,
+          "dur": 1.5549,
+          "vel": 95
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 1.6901,
+          "dur": 0.7775,
+          "vel": 92
+        },
+        {
+          "midi": 65,
+          "name": "F4",
+          "t0": 2.5352,
+          "dur": 1.1662,
+          "vel": 93
+        },
+        {
+          "midi": 64,
+          "name": "E4",
+          "t0": 3.8028,
+          "dur": 1.5549,
+          "vel": 86
+        },
+        {
+          "midi": 60,
+          "name": "C4",
+          "t0": 5.493,
+          "dur": 1.1662,
+          "vel": 102
+        },
+        {
+          "midi": 58,
+          "name": "A#3",
+          "t0": 6.7606,
+          "dur": 0.3887,
+          "vel": 92
+        },
+        {
+          "midi": 62,
+          "name": "D4",
+          "t0": 7.1831,
+          "dur": 1.5549,
+          "vel": 87
+        }
+      ],
+      "analysis": {
+        "n_notes": 7,
+        "key_candidates": [
+          {
+            "key": "D minor",
+            "score": 1.0
+          }
+        ],
+        "tempo_bpm": {
+          "value": 71.0,
+          "confidence": 1.0
+        },
+        "contour": "u u d d d u"
+      },
+      "f0": {
+        "engine": "ground_truth",
+        "voicing_ratio": 1.0,
+        "median_hz": 293.66
+      }
+    }
+  ]
+}

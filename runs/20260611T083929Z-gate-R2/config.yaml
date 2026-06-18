@@ -1,0 +1,4 @@
+phase: R2
+fixtures: /Users/ufuk_/Developer/tinkers/large-mambo-model/fixtures/synthetic
+f0_backend: pyin
+seed: 1234

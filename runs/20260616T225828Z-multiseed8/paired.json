@@ -1,0 +1,66 @@
+{
+  "joint_vs_linguistic": {
+    "clean": {
+      "mean_diff": 0.0253,
+      "wins": "7/8",
+      "sign_p": 0.0703,
+      "boot_ci": [
+        0.0113,
+        0.0414
+      ],
+      "cohen_dz": 1.11
+    },
+    "20db": {
+      "mean_diff": 0.0387,
+      "wins": "8/8",
+      "sign_p": 0.0078,
+      "boot_ci": [
+        0.0219,
+        0.059
+      ],
+      "cohen_dz": 1.33
+    },
+    "10db": {
+      "mean_diff": 0.0431,
+      "wins": "8/8",
+      "sign_p": 0.0078,
+      "boot_ci": [
+        0.0293,
+        0.0539
+      ],
+      "cohen_dz": 2.25
+    }
+  },
+  "joint_vs_acoustic": {
+    "clean": {
+      "mean_diff": 0.1741,
+      "wins": "8/8",
+      "sign_p": 0.0078,
+      "boot_ci": [
+        0.1609,
+        0.1867
+      ],
+      "cohen_dz": 8.85
+    },
+    "20db": {
+      "mean_diff": 0.12,
+      "wins": "8/8",
+      "sign_p": 0.0078,
+      "boot_ci": [
+        0.1109,
+        0.1287
+      ],
+      "cohen_dz": 8.75
+    },
+    "10db": {
+      "mean_diff": 0.1311,
+      "wins": "8/8",
+      "sign_p": 0.0078,
+      "boot_ci": [
+        0.1185,
+        0.1474
+      ],
+      "cohen_dz": 5.79
+    }
+  }
+}

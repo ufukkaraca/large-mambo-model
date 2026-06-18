@@ -1,0 +1,40 @@
+{
+  "bench": "MamboBench baselines (synthetic)",
+  "timestamp": "20260616T225527Z",
+  "commit": "8fcc9b04fcc54c1dc3911930f72f38b1378e9052",
+  "dirty": false,
+  "systems": {
+    "B1 whisper-only": {
+      "n": 225,
+      "segment_f1": 0.18666666666666668,
+      "note_f1": 0.18666666666666668,
+      "boundary_ms": 0.0,
+      "hallucination": 0.6977777777777778,
+      "key_top2": 0.0
+    },
+    "B3 acoustic": {
+      "n": 225,
+      "segment_f1": 0.7808795895462561,
+      "note_f1": 0.7929400105141384,
+      "boundary_ms": 32.249999999999886,
+      "hallucination": 0.0,
+      "key_top2": 0.9523809523809523
+    },
+    "B4 linguistic": {
+      "n": 225,
+      "segment_f1": 0.829358024691358,
+      "note_f1": 0.7885436540367765,
+      "boundary_ms": 47.69999999999997,
+      "hallucination": 0.0,
+      "key_top2": 0.8666666666666667
+    },
+    "B5 joint (ours)": {
+      "n": 225,
+      "segment_f1": 0.90936860670194,
+      "note_f1": 0.870674192612768,
+      "boundary_ms": 75.40000000000002,
+      "hallucination": 0.0,
+      "key_top2": 0.9428571428571428
+    }
+  }
+}

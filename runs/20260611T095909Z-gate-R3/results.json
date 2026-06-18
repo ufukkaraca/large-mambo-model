@@ -1,0 +1,38 @@
+{
+  "phase": "R3",
+  "timestamp": "20260611T095909Z",
+  "commit": "41a6f06cae3278c57b1332c8309cdd77644c3a80",
+  "dirty": false,
+  "rows": [
+    {
+      "name": "r3.lora_json_validity",
+      "metric": "LoRA outputs valid UIR JSON",
+      "threshold": "(info)",
+      "measured": 1.0,
+      "status": "INFO",
+      "detail": "23/23"
+    },
+    {
+      "name": "r3.segment_f1",
+      "metric": "segment F1 \u2014 LoRA vs modular",
+      "threshold": "(info)",
+      "measured": 0.4652173913043478,
+      "status": "INFO",
+      "detail": "LoRA 0.465 vs modular 0.918"
+    },
+    {
+      "name": "r3.ship_decision",
+      "metric": "LoRA ships (beats modular) else negative result",
+      "threshold": "decision",
+      "measured": null,
+      "status": "PASS",
+      "detail": "NEGATIVE RESULT (modular wins; documented)"
+    }
+  ],
+  "summary": {
+    "s_pass": 1,
+    "s_fail": 0,
+    "pending": 0
+  },
+  "ablation": {}
+}

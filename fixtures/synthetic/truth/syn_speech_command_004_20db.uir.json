@@ -1,0 +1,19 @@
+{
+  "schema": "mambo.utterance.v1",
+  "utterance_id": "syn_speech_command_004_20db",
+  "audio": {
+    "sample_rate": 48000,
+    "duration_s": 2.0684,
+    "source": "synthetic"
+  },
+  "segments": [
+    {
+      "kind": "speech",
+      "t0": 0.0,
+      "t1": 2.0684,
+      "confidence": 1.0,
+      "role": "instruction",
+      "text": "start recording on the selected track"
+    }
+  ]
+}

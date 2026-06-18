@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mambo · Voice Collector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#16110c; --ink2:#1e1710; --panel:#221a12; --line:#3a2e20; --line2:#4a3a28;
+         --cream:#efe5d3; --paper:#d8cbb4; --mut:#9c8d74; --faint:#6b5e49;
+         --accent:#f4ac3e; --amber-2:#ffc46b; --rec:#ff6f54; --hum:#63c8b2; --ok:#f4ac3e;
+         --serif:'Instrument Serif','Times New Roman',serif; --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; color:var(--cream); font-family:var(--mono); font-weight:300; letter-spacing:.01em;
+        background:radial-gradient(120% 90% at 50% -10%, #2a1f14 0%, var(--ink) 55%, #100c08 100%), var(--ink);
+        -webkit-font-smoothing:antialiased; }
+  body::before{ content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.05; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .wrap{ position:relative; z-index:1; max-width:620px; margin:0 auto; padding:30px 22px 96px; }
+  h1{ font-family:var(--serif); font-size:38px; line-height:.9; margin:0 0 4px; letter-spacing:-.01em; }
+  h1 em{ font-style:italic; color:var(--accent); }
+  h1 .tag{ display:block; font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.4em;
+    text-transform:uppercase; color:var(--faint); margin-top:8px; }
+  .sub{ color:var(--mut); font-size:13px; margin:14px 0 20px; line-height:1.6; }
+  .bar{ height:5px; background:#0c0906; border-radius:3px; overflow:hidden; margin:0 0 7px; box-shadow:inset 0 1px 2px rgba(0,0,0,.6); }
+  .bar > i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,var(--accent),var(--amber-2)); transition:width .25s; }
+  .barlbl{ color:var(--faint); font-size:11px; letter-spacing:.05em; margin:0 0 16px; display:flex; justify-content:space-between; text-transform:uppercase; }
+  .dots{ display:flex; gap:5px; margin:0 0 16px; flex-wrap:wrap; }
+  .dot{ width:20px; height:20px; border-radius:50%; border:1px solid var(--line); display:flex;
+        align-items:center; justify-content:center; font-size:10px; color:var(--faint); cursor:pointer; background:var(--ink2); }
+  .dot.cur{ border-color:var(--accent); color:var(--accent); box-shadow:0 0 8px rgba(244,172,62,.35); }
+  .dot.done{ border-color:var(--accent); color:var(--accent); background:rgba(244,172,62,.1); }
+  .dot.sec{ border:none; width:auto; padding:0 4px; font-size:9px; text-transform:uppercase; letter-spacing:.08em; align-self:center; cursor:default; color:var(--faint); }
+  .card{ background:linear-gradient(180deg,var(--panel),var(--ink2)); border:1px solid var(--line); border-radius:4px;
+         padding:24px; box-shadow:0 10px 26px rgba(0,0,0,.3); animation:rise .26s cubic-bezier(.2,.8,.2,1) both; }
+  .step{ color:var(--faint); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; }
+  .title{ font-family:var(--serif); font-size:27px; font-weight:400; margin:8px 0 14px; line-height:1.1; }
+  .script{ font-family:var(--serif); font-size:24px; line-height:1.35; color:var(--cream); padding:14px 0 14px 18px;
+           border-left:2px solid var(--accent); margin:0 0 14px; }
+  .script .hum{ color:var(--hum); font-style:italic; }
+  .howto{ font-size:15px; color:var(--paper); margin:0 0 9px; line-height:1.5; }
+  .tip{ color:var(--mut); font-size:12.5px; margin:0 0 18px; }
+  .meter{ height:7px; background:#0c0906; border-radius:4px; overflow:hidden; margin:0 0 16px; box-shadow:inset 0 1px 2px rgba(0,0,0,.7); }
+  .meter > i{ display:block; height:100%; width:0%; background:linear-gradient(90deg,#7a9e4e,#cdbb46 55%,var(--accent) 82%,var(--rec)); transition:width .05s; }
+  .row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  button{ font:inherit; font-family:var(--mono); border:1px solid var(--line2); background:#241c14; color:var(--paper);
+          padding:11px 16px; border-radius:3px; cursor:pointer; letter-spacing:.02em; transition:border-color .2s; }
+  button:hover:not(:disabled){ border-color:var(--accent); } button:disabled{ opacity:.35; cursor:default; }
+  button.primary{ background:var(--accent); color:#221604; border-color:transparent; font-weight:500; }
+  button.rec{ background:linear-gradient(180deg,#c8531f,#8a3614); color:#fff; border-color:transparent; font-weight:500; min-width:150px; }
+  button.big{ font-size:15px; padding:14px 22px; }
+  input[type=text],input[type=number]{ font:inherit; font-family:var(--mono); background:#0c0906; color:var(--cream);
+    border:1px solid var(--line2); border-radius:3px; padding:11px 12px; }
+  input[type=text]{ width:100%; }
+  .count{ margin:16px 0 0; display:none; align-items:center; gap:10px; font-size:13px; color:var(--mut); }
+  .count.show{ display:flex; } .count input{ width:62px; text-align:center; }
+  .timer{ font-variant-numeric:tabular-nums; color:var(--faint); margin-left:auto; font-size:13px; }
+  audio{ width:100%; margin:16px 0 0; filter:sepia(.3) hue-rotate(-12deg) saturate(.8); }
+  .save{ margin-top:20px; display:flex; gap:10px; } .msg{ margin-top:14px; font-size:12.5px; min-height:18px; letter-spacing:.03em; }
+  .msg.ok{ color:var(--accent); } .msg.err{ color:var(--rec); }
+  .dl{ position:fixed; bottom:0; left:0; right:0; background:rgba(18,13,8,.86); border-top:1px solid var(--line2);
+       padding:13px 22px; backdrop-filter:blur(8px); z-index:2; }
+  .dl .inner{ max-width:620px; margin:0 auto; display:flex; align-items:center; gap:12px; justify-content:space-between; }
+  .dl .n{ color:var(--mut); font-size:12px; letter-spacing:.04em; }
+  kbd{ font-family:var(--mono); font-size:11px; background:#0c0906; border:1px solid var(--line2); border-bottom-width:2px;
+       border-radius:3px; padding:1px 6px; color:var(--paper); }
+  .warn{ background:rgba(244,172,62,.08); border:1px solid var(--line2); color:var(--amber-2); border-radius:4px;
+         padding:13px 15px; margin:0 0 18px; font-size:13.5px; line-height:1.5; }
+  label.blk{ display:block; color:var(--mut); font-size:12.5px; letter-spacing:.04em; margin:16px 0 6px; }
+  @keyframes rise{ from{ opacity:0; transform:translateY(7px);} to{ opacity:1; transform:none; } }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>M<em>a</em>mbo<span class="tag">voice collector</span></h1>
+  <p class="sub">~12–15 min, entirely in your browser. At the end you download <b>one .zip</b> and send it back — nothing is uploaded anywhere.</p>
+  <div id="warn"></div>
+  <div id="screen"></div>
+</div>
+<div class="dl" id="dlbar" style="display:none"><div class="inner">
+  <span class="n" id="dln">0 takes recorded</span>
+  <button class="primary" id="dlbtn" disabled>⬇︎ Download my recordings (.zip)</button>
+</div></div>
+
+<script>
+const ITEMS = [
+  {file:"hold_steady_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:1, title:"Held note — steady", howto:"Hum ONE note and hold it steady, ~3 seconds.", tip:"Any comfortable pitch."},
+  {file:"hold_vibrato_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:1, title:"Held note — with wobble", howto:"Hum ONE note ~3s, let it wobble naturally.", tip:"Still ONE note."},
+  {file:"repeat3_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:3, title:"Three on one pitch", howto:'Sing “da da da” — three hits, same pitch.', tip:"Clear gaps."},
+  {file:"repeat4_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:4, title:"Four on one pitch", howto:'Sing “da da da da” — four hits, same pitch.', tip:""},
+  {file:"repeat_fast6_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:6, title:"Six fast on one pitch", howto:'Sing “da-da-da-da-da-da” quickly — six hits.', tip:"Fast but distinct."},
+  {file:"scale_up4_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:4, title:"Four rising", howto:'Sing “da da da da”, stepping UP each time.', tip:"Ascending."},
+  {file:"scale_down4_01.wav", group:"Single notes & repeats", type:"note", fixed:true, intended:4, title:"Four falling", howto:'Sing “da da da da”, stepping DOWN.', tip:"Descending."},
+  {file:"legato_slow4_01.wav", group:"Smooth melodies & edges", type:"note", fixed:true, intended:4, title:"Smooth 4-note tune", howto:"Hum a smooth 4-note melody SLOWLY, gliding (no “da”).", tip:"Legato."},
+  {file:"legato_slow5_01.wav", group:"Smooth melodies & edges", type:"note", fixed:true, intended:5, title:"Smooth 5-note tune", howto:"Hum a smooth 5-note melody, slowly.", tip:"Legato."},
+  {file:"legato_tune_01.wav", group:"Smooth melodies & edges", type:"note", fixed:false, intended:6, title:"A little tune (~6 notes)", howto:"Hum any short melody, smoothly. Set how many notes.", tip:"Your choice."},
+  {file:"legato_updown5_01.wav", group:"Smooth melodies & edges", type:"note", fixed:true, intended:5, title:"Up then down (5)", howto:"Hum UP three notes then DOWN two — 5 total.", tip:"Connected."},
+  {file:"edges_silence_01.wav", group:"Smooth melodies & edges", type:"note", fixed:false, intended:5, title:"Tune with silence around it", howto:"Wait ~1s, hum a short melody, wait ~1s, stop. Set the count.", tip:"Silence before AND after."},
+  {file:"edges_abrupt_01.wav", group:"Smooth melodies & edges", type:"note", fixed:false, intended:5, title:"Same tune — no silence", howto:"Hum the SAME melody, start instantly, stop instantly.", tip:"No edge silence."},
+  {file:"low_melody_01.wav", group:"Range & timbre", type:"note", fixed:false, intended:4, title:"Low melody", howto:"Hum a short melody LOW in your voice. Set the count.", tip:"Lower than usual."},
+  {file:"high_melody_01.wav", group:"Range & timbre", type:"note", fixed:false, intended:4, title:"High melody", howto:"Hum a short melody HIGH in your voice. Set the count.", tip:"Higher than usual."},
+  {file:"doo_melody_01.wav", group:"Range & timbre", type:"note", fixed:false, intended:4, title:"“doo doo doo” melody", howto:'Sing a short melody on “doo”. Set the count.', tip:"Open vowel."},
+  {file:"cmd_kick_01.wav", group:"Spoken commands", type:"speech", transcript:"Kick the drums up a bit."},
+  {file:"cmd_bass_01.wav", group:"Spoken commands", type:"speech", transcript:"Make the bass a little louder."},
+  {file:"cmd_mute_01.wav", group:"Spoken commands", type:"speech", transcript:"Mute the keys."},
+  {file:"cmd_solo_01.wav", group:"Spoken commands", type:"speech", transcript:"Solo the lead track."},
+  {file:"cmd_record_01.wav", group:"Spoken commands", type:"speech", transcript:"Start recording on the selected track."},
+  {file:"cmd_play_01.wav", group:"Spoken commands", type:"speech", transcript:"Go back to the start and play."},
+  {file:"cmd_addtrack_01.wav", group:"Spoken commands", type:"speech", transcript:"Add a new software instrument track."},
+  {file:"cmd_reverb_01.wav", group:"Spoken commands", type:"speech", transcript:"Bring the reverb down on the vocal."},
+  {file:"mixed_like_slower_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:4, transcript:"Give me something like §…§ but slower.", howto:'One breath — hum a few notes where the green is.'},
+  {file:"mixed_bass_do_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:4, transcript:"Can the bass do §…§ ?", howto:'One breath: speak, then hum the green part.'},
+  {file:"mixed_go_instead_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:4, transcript:"Make it go §…§ instead.", howto:'One breath: speak, hum, speak.'},
+  {file:"mixed_humfirst_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:4, transcript:"§…§ — that, but on strings.", howto:'Hum FIRST, then speak the rest.'},
+  {file:"mixed_contrast_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:6, transcript:"Make it go §…§ instead of §…§.", howto:'Two hums — count BOTH total.'},
+  {file:"mixed_play_and_01.wav", group:"Command + hum", type:"mixed", fixed:false, intended:4, transcript:"Play me §…§ and kick the drums up.", howto:'One breath: speak, hum, speak.'},
+];
+const groups=[...new Set(ITEMS.map(i=>i.group))];
+let idx=0, speaker="", takes={}, takeCount={};
+let mediaRecorder=null, chunks=[], stream=null, audioCtx=null, analyser=null, rafId=0, t0=0, timerId=0, lastWav=null;
+const screen=document.getElementById('screen');
+
+// ---- mic secure-context guard ----
+if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
+  document.getElementById('warn').innerHTML='<div class="warn">⚠️ This browser won’t allow microphone access here. Open this page over <b>https</b> or <b>http://localhost</b> (not as a <code>file://</code> double-click). If you got a link, just use the link. Chrome/Edge/Firefox/Safari all work over a link.</div>';
+}
+
+function setupScreen(){
+  screen.innerHTML=`<div class="card">
+    <div class="title">Before we start</div>
+    <label class="blk">Your name or a nickname (labels your recordings):</label>
+    <input type="text" id="who" placeholder="e.g. Alex" autocomplete="off">
+    <label class="blk" style="margin-top:16px"><input type="checkbox" id="consent"> I agree my voice recordings can be used for this music-AI research.</label>
+    <div class="save"><button class="primary big" id="go" disabled>Start recording →</button></div>
+    <p class="tip" style="margin-top:14px">Quiet room, normal volume, mic ~20 cm away. You can re-record any take and skip any you don’t want.</p>
+  </div>`;
+  const who=document.getElementById('who'), cons=document.getElementById('consent'), go=document.getElementById('go');
+  const upd=()=>{ go.disabled=!(who.value.trim() && cons.checked); };
+  who.oninput=upd; cons.onchange=upd;
+  go.onclick=()=>{ speaker=who.value.trim().replace(/[^A-Za-z0-9_-]+/g,'_')||'voice'; document.getElementById('dlbar').style.display='block'; render(); };
+}
+
+function scriptHTML(t){ return t.replace(/§…§/g,'<span class="hum">♪ … ♪</span>'); }
+function drawProgress(){
+  const done=ITEMS.filter(it=>takes[it.file]).length;
+  document.getElementById('dln').textContent=`${done} of ${ITEMS.length} takes recorded`;
+  document.getElementById('dlbtn').disabled=done===0;
+}
+function render(){
+  const it=ITEMS[idx]; lastWav=null;
+  const showCount=(it.type==='note'||it.type==='mixed'), sec=groups.indexOf(it.group)+1;
+  let dots=''; let lastG=null;
+  ITEMS.forEach((x,i)=>{ if(x.group!==lastG){ dots+=`<div class="dot sec">${x.group.split(' ')[0]}</div>`; lastG=x.group; }
+    dots+=`<div class="dot ${i===idx?'cur':''} ${takes[x.file]?'done':''}" onclick="goto(${i})">${takes[x.file]?'✓':'·'}</div>`; });
+  screen.innerHTML=`<div class="bar"><i style="width:${100*ITEMS.filter(x=>takes[x.file]).length/ITEMS.length}%"></i></div>
+    <div class="barlbl"><span>Section ${sec}/${groups.length} · ${it.group}</span><span>take ${idx+1}/${ITEMS.length}</span></div>
+    <div class="dots">${dots}</div>
+    <div class="card">
+      <div class="step">${it.file}${takes[it.file]?' · saved ✓':''}</div>
+      ${it.type!=='note' ? `<div class="title">${it.type==='speech'?'Read this aloud':'Speak + hum, one breath'}</div><div class="script">${scriptHTML(it.transcript)}</div>` : `<div class="title">${it.title}</div>`}
+      ${it.howto?`<div class="howto">${it.howto}</div>`:''} ${it.tip?`<div class="tip">${it.tip}</div>`:''}
+      <div class="meter"><i id="lvl"></i></div>
+      <div class="row"><button class="rec" id="recBtn">● Record</button><button id="playBtn" disabled>▶ Play</button><button id="redoBtn" disabled>↺ Re-record</button><span class="timer" id="timer">0.0s</span></div>
+      <div class="count ${showCount?'show':''}"><label>How many notes did you hum?</label><input type="number" id="countInput" min="1" max="24" value="${takeCount[it.file]??it.intended??4}"></div>
+      <audio id="player" controls style="display:none"></audio>
+      <div class="save"><button class="primary" id="saveBtn" disabled>Save &amp; next →</button><button id="skipBtn">Skip</button></div>
+      <div class="msg" id="msg"></div>
+    </div>`;
+  document.getElementById('recBtn').onclick=toggleRec; document.getElementById('playBtn').onclick=play;
+  document.getElementById('redoBtn').onclick=()=>render(); document.getElementById('saveBtn').onclick=save;
+  document.getElementById('skipBtn').onclick=()=>goto(idx+1); drawProgress();
+}
+function goto(i){ if(mediaRecorder&&mediaRecorder.state==='recording')stopRec(); if(i>=ITEMS.length){ done(); return; } idx=Math.max(0,i); render(); }
+function done(){ screen.innerHTML=`<div class="card" style="text-align:center"><div style="font-size:34px">🎉</div><p>That’s everything — <b>${ITEMS.filter(x=>takes[x.file]).length}/${ITEMS.length}</b> takes.</p><p class="tip">Hit <b>Download my recordings (.zip)</b> below and send that one file back. Thank you!</p><button onclick="goto(0)">← Back</button></div>`; drawProgress(); }
+function setMsg(t,c=''){ const m=document.getElementById('msg'); if(m){ m.textContent=t; m.className='msg '+c; } }
+
+async function toggleRec(){
+  if(mediaRecorder&&mediaRecorder.state==='recording'){ stopRec(); return; }
+  try{ stream=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:false,noiseSuppression:false,autoGainControl:false}}); }
+  catch(e){ setMsg('Allow microphone access and retry.','err'); return; }
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)({sampleRate:48000});
+  const src=audioCtx.createMediaStreamSource(stream); analyser=audioCtx.createAnalyser(); analyser.fftSize=1024; src.connect(analyser); meter();
+  chunks=[]; mediaRecorder=new MediaRecorder(stream); mediaRecorder.ondataavailable=e=>chunks.push(e.data); mediaRecorder.onstop=finish; mediaRecorder.start();
+  t0=performance.now(); timerId=setInterval(tick,100); tick();
+  const b=document.getElementById('recBtn'); b.textContent='■ Stop'; b.classList.remove('rec'); setMsg('Recording… tap to stop.');
+}
+function stopRec(){ if(!mediaRecorder||mediaRecorder.state!=='recording')return; clearInterval(timerId); mediaRecorder.stop(); stream.getTracks().forEach(t=>t.stop()); cancelAnimationFrame(rafId); const l=document.getElementById('lvl'); if(l)l.style.width='0%'; }
+async function finish(){
+  let ab; try{ ab=await audioCtx.decodeAudioData(await new Blob(chunks).arrayBuffer()); }catch(e){ setMsg('Could not decode — try again.','err'); rb(); return; }
+  lastWav=encodeWAV(ab);
+  const p=document.getElementById('player'); p.src=URL.createObjectURL(new Blob([lastWav],{type:'audio/wav'})); p.style.display='block';
+  document.getElementById('playBtn').disabled=false; document.getElementById('redoBtn').disabled=false; document.getElementById('saveBtn').disabled=false; rb(); setMsg('Got it — play it back, or Save & next.','ok');
+}
+function rb(){ const b=document.getElementById('recBtn'); if(b){ b.textContent='● Record'; b.classList.add('rec'); } }
+function play(){ const p=document.getElementById('player'); if(p){ p.currentTime=0; p.play(); } }
+function tick(){ const el=document.getElementById('timer'); if(el)el.textContent=((performance.now()-t0)/1000).toFixed(1)+'s'; }
+function meter(){ const b=new Uint8Array(analyser.frequencyBinCount); const step=()=>{ if(!analyser)return; analyser.getByteTimeDomainData(b); let s=0; for(let i=0;i<b.length;i++){const v=(b[i]-128)/128;s+=v*v;} const l=document.getElementById('lvl'); if(l)l.style.width=Math.min(100,Math.sqrt(s/b.length)*260)+'%'; rafId=requestAnimationFrame(step); }; step(); }
+function save(){
+  if(!lastWav)return; const it=ITEMS[idx];
+  const meta={wav:it.file, kind:it.type, speaker, desc:(it.title||it.transcript||'').slice(0,80)};
+  if(it.type!=='speech'){ const c=parseInt(document.getElementById('countInput').value||it.intended,10); takeCount[it.file]=c; meta.intended_notes=c; meta.tol=1; }
+  if(it.transcript) meta.transcript=it.transcript.replace(/§…§/g,'[hum]');
+  takes[it.file]={wav:lastWav, meta}; setMsg('Saved ✓','ok'); setTimeout(()=>goto(idx+1),180);
+}
+
+function encodeWAV(ab){
+  const nc=ab.numberOfChannels, sr=ab.sampleRate, len=ab.length, mono=new Float32Array(len);
+  for(let c=0;c<nc;c++){ const d=ab.getChannelData(c); for(let i=0;i<len;i++) mono[i]+=d[i]/nc; }
+  const out=new ArrayBuffer(44+len*2), v=new DataView(out), w=(o,s)=>{for(let i=0;i<s.length;i++)v.setUint8(o+i,s.charCodeAt(i));};
+  w(0,'RIFF'); v.setUint32(4,36+len*2,true); w(8,'WAVE'); w(12,'fmt '); v.setUint32(16,16,true); v.setUint16(20,1,true);
+  v.setUint16(22,1,true); v.setUint32(24,sr,true); v.setUint32(28,sr*2,true); v.setUint16(32,2,true); v.setUint16(34,16,true);
+  w(36,'data'); v.setUint32(40,len*2,true); let o=44; for(let i=0;i<len;i++){let s=Math.max(-1,Math.min(1,mono[i])); v.setInt16(o,s<0?s*0x8000:s*0x7FFF,true); o+=2;}
+  return new Uint8Array(out);
+}
+
+// ---- store-only ZIP (no deps) ----
+function crc32(d){ let t=crc32.t; if(!t){ t=crc32.t=[]; for(let n=0;n<256;n++){ let c=n; for(let k=0;k<8;k++) c=c&1?(0xEDB88320^(c>>>1)):(c>>>1); t[n]=c>>>0; } }
+  let crc=~0; for(let i=0;i<d.length;i++) crc=(crc>>>8)^t[(crc^d[i])&255]; return (~crc)>>>0; }
+function makeZip(files){
+  const enc=new TextEncoder(); const parts=[], cen=[]; let off=0;
+  const u16=n=>[n&255,(n>>8)&255], u32=n=>[n&255,(n>>8)&255,(n>>16)&255,(n>>24)&255];
+  for(const f of files){
+    const name=enc.encode(f.name), data=f.data, crc=crc32(data), sz=data.length;
+    const lh=new Uint8Array([0x50,0x4b,3,4, 20,0, 0,0, 0,0, 0,0,0,0, ...u32(crc), ...u32(sz), ...u32(sz), ...u16(name.length), 0,0]);
+    parts.push(lh,name,data);
+    cen.push(new Uint8Array([0x50,0x4b,1,2, 20,0, 20,0, 0,0, 0,0, 0,0,0,0, ...u32(crc), ...u32(sz), ...u32(sz), ...u16(name.length), 0,0, 0,0, 0,0, 0,0, 0,0,0,0, ...u32(off)]), name);
+    off+=lh.length+name.length+data.length;
+  }
+  let cs=0; cen.forEach(c=>cs+=c.length);
+  const eocd=new Uint8Array([0x50,0x4b,5,6, 0,0, 0,0, ...u16(files.length), ...u16(files.length), ...u32(cs), ...u32(off), 0,0]);
+  return new Blob([...parts,...cen,eocd],{type:'application/zip'});
+}
+function download(){
+  const saved=ITEMS.filter(it=>takes[it.file]); if(!saved.length) return;
+  const files=[]; const manifest=[];
+  for(const it of saved){ const t=takes[it.file]; files.push({name:`${speaker}/${it.file}`, data:t.wav}); manifest.push(JSON.stringify(t.meta)); }
+  files.push({name:`${speaker}/manifest.jsonl`, data:new TextEncoder().encode(manifest.join('\n')+'\n')});
+  const url=URL.createObjectURL(makeZip(files)); const a=document.createElement('a'); a.href=url; a.download=`mambo_voices_${speaker}.zip`; a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),4000);
+}
+
+document.getElementById('dlbtn').onclick=download;
+document.addEventListener('keydown',e=>{ if(e.target.tagName==='INPUT')return;
+  if(e.code==='Space'){ e.preventDefault(); const b=document.getElementById('recBtn'); if(b)toggleRec(); }
+  else if((e.key==='p'||e.key==='P')){ const b=document.getElementById('playBtn'); if(b&&!b.disabled)play(); }
+  else if((e.key==='r'||e.key==='R')){ const b=document.getElementById('redoBtn'); if(b&&!b.disabled)render(); }
+  else if(e.key==='Enter'){ const b=document.getElementById('saveBtn'); if(b&&!b.disabled)save(); } });
+setupScreen();
+</script>
+</body>
+</html>

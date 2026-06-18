@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_003_clean",
+  "intent_summary": "solo a track",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "solo_track",
+      "args": {
+        "index": 3
+      }
+    }
+  ]
+}

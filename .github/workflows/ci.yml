@@ -1,0 +1,26 @@
+name: CI
+
+# Smoke harness: on every push/PR, run the unit + contract
+# suite so the benchmark stays alive, not archival. These tests use synthetic
+# audio (librosa pYIN) + the deterministic planner — no macOS `say`, no Whisper,
+# no network — so they run on Linux. The full metric gate (`make gate-R0`, which
+# needs macOS `say` for speech fixtures) is a local/macOS step, not CI.
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - name: Sync lab (core deps)
+        working-directory: lab
+        run: uv sync
+      - name: Contract + unit tests
+        working-directory: lab
+        run: uv run pytest -q

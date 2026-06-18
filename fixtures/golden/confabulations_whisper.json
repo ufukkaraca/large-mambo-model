@@ -1,0 +1,237 @@
+[
+  {
+    "src": "synthetic_10db",
+    "uid": "syn_pure_hum_015_10db",
+    "confab": "Mmm, mmm, mmm, mmm, mmm, mmm."
+  },
+  {
+    "src": "synthetic_10db",
+    "uid": "syn_pure_hum_016_10db",
+    "confab": "You"
+  },
+  {
+    "src": "human_eddy",
+    "uid": "repeat3_01.wav",
+    "confab": "Duh, duh, duh."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "repeat4_01.wav",
+    "confab": "Da, da, da, da, da."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "repeat_fast6_01.wav",
+    "confab": "Duh, duh, duh, duh, duh, duh."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "scale_up4_01.wav",
+    "confab": "Dada Dada Dada"
+  },
+  {
+    "src": "human_eddy",
+    "uid": "scale_down4_01.wav",
+    "confab": "Oh"
+  },
+  {
+    "src": "human_eddy",
+    "uid": "legato_slow4_01.wav",
+    "confab": "Mm-hmm. Mm hmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "legato_slow5_01.wav",
+    "confab": "Mm-hmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "legato_tune_01.wav",
+    "confab": "Mmm. Mmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "legato_updown5_01.wav",
+    "confab": "Mm-hmm. Mm-hmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "edges_abrupt_01.wav",
+    "confab": "Mm-hmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "low_melody_01.wav",
+    "confab": ". . . ."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "high_melody_01.wav",
+    "confab": "Mm-hmm."
+  },
+  {
+    "src": "human_eddy",
+    "uid": "doo_melody_01.wav",
+    "confab": "D-O-D-O-D-O"
+  },
+  {
+    "src": "human_omer",
+    "uid": "hold_steady_01.wav",
+    "confab": "D."
+  },
+  {
+    "src": "human_omer",
+    "uid": "hold_vibrato_01.wav",
+    "confab": "Love"
+  },
+  {
+    "src": "human_omer",
+    "uid": "repeat3_01.wav",
+    "confab": "Da, Da, Da, Da, Da, Da, Da."
+  },
+  {
+    "src": "human_omer",
+    "uid": "repeat4_01.wav",
+    "confab": "Do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do do"
+  },
+  {
+    "src": "human_omer",
+    "uid": "repeat_fast6_01.wav",
+    "confab": "Ta da da da da da da. Ta. Oh."
+  },
+  {
+    "src": "human_omer",
+    "uid": "scale_up4_01.wav",
+    "confab": "Don't, Don't, Don't, Don't."
+  },
+  {
+    "src": "human_omer",
+    "uid": "scale_down4_01.wav",
+    "confab": "Duh-duh-duh-duh-duh"
+  },
+  {
+    "src": "human_omer",
+    "uid": "legato_slow4_01.wav",
+    "confab": "La, La see, Do Phaa, Phaa, Phaa, Phaa, La, La see, Do Phaa, Phaa, Phaa, Phaa."
+  },
+  {
+    "src": "human_omer",
+    "uid": "legato_slow5_01.wav",
+    "confab": "Do re mi fa do re mi fa so la si do"
+  },
+  {
+    "src": "human_omer",
+    "uid": "legato_tune_01.wav",
+    "confab": "Oh, oh, oh, oh."
+  },
+  {
+    "src": "human_omer",
+    "uid": "legato_updown5_01.wav",
+    "confab": "Mm-hmm."
+  },
+  {
+    "src": "human_omer",
+    "uid": "edges_silence_01.wav",
+    "confab": "Mm. Mm. Mm. Mm. Mm."
+  },
+  {
+    "src": "human_omer",
+    "uid": "edges_abrupt_01.wav",
+    "confab": "Mm-hmm."
+  },
+  {
+    "src": "human_omer",
+    "uid": "low_melody_01.wav",
+    "confab": "La, la, la."
+  },
+  {
+    "src": "human_omer",
+    "uid": "high_melody_01.wav",
+    "confab": "No, no, no, no, no."
+  },
+  {
+    "src": "human_omer",
+    "uid": "doo_melody_01.wav",
+    "confab": "Do do do do do"
+  },
+  {
+    "src": "human_rim",
+    "uid": "hold_steady_01.wav",
+    "confab": "Hoooooo!"
+  },
+  {
+    "src": "human_rim",
+    "uid": "hold_vibrato_01.wav",
+    "confab": "Haaahhhhhhhhhhhhhhhhhhhhhhhhhh"
+  },
+  {
+    "src": "human_rim",
+    "uid": "repeat3_01.wav",
+    "confab": "Da, da, da, da."
+  },
+  {
+    "src": "human_rim",
+    "uid": "repeat4_01.wav",
+    "confab": "Duh, duh, duh, duh, duh"
+  },
+  {
+    "src": "human_rim",
+    "uid": "repeat_fast6_01.wav",
+    "confab": "dah dah dah dah dah dah"
+  },
+  {
+    "src": "human_rim",
+    "uid": "scale_up4_01.wav",
+    "confab": "Da da da da da."
+  },
+  {
+    "src": "human_rim",
+    "uid": "scale_down4_01.wav",
+    "confab": "Da da da da da."
+  },
+  {
+    "src": "human_rim",
+    "uid": "legato_slow4_01.wav",
+    "confab": "Oh"
+  },
+  {
+    "src": "human_rim",
+    "uid": "legato_slow5_01.wav",
+    "confab": "ahhhhhhhhhhhhh"
+  },
+  {
+    "src": "human_rim",
+    "uid": "legato_tune_01.wav",
+    "confab": "Oh"
+  },
+  {
+    "src": "human_rim",
+    "uid": "legato_updown5_01.wav",
+    "confab": "Ah"
+  },
+  {
+    "src": "human_rim",
+    "uid": "edges_silence_01.wav",
+    "confab": "Ah, ah, ah."
+  },
+  {
+    "src": "human_rim",
+    "uid": "edges_abrupt_01.wav",
+    "confab": "Ah, ah, ah."
+  },
+  {
+    "src": "human_rim",
+    "uid": "low_melody_01.wav",
+    "confab": "Blah!"
+  },
+  {
+    "src": "human_rim",
+    "uid": "high_melody_01.wav",
+    "confab": "Hello"
+  },
+  {
+    "src": "human_rim",
+    "uid": "doo_melody_01.wav",
+    "confab": "Do do do do do"
+  }
+]

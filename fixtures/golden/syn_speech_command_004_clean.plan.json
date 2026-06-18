@@ -1,0 +1,14 @@
+{
+  "schema": "mambo.action.v1",
+  "utterance_id": "syn_speech_command_004_clean",
+  "intent_summary": "arm and record",
+  "needs_confirmation": false,
+  "actions": [
+    {
+      "op": "transport",
+      "args": {
+        "action": "record"
+      }
+    }
+  ]
+}
