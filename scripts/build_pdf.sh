@@ -30,7 +30,6 @@ perl -0777 -pe 's/<!-- PDF-STRIP-START -->.*?<!-- PDF-STRIP-END -->\n?//gs; s/Th
 
 pandoc "$TMP" -o "$OUT" \
   --pdf-engine=xelatex \
-  --toc --toc-depth=2 \
   -V geometry:margin=1in \
   -V mainfont="$MAINFONT" \
   -V monofont="$MONOFONT" \
